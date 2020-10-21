@@ -125,7 +125,7 @@
 
 
 	&__content {
-		margin: 2rem 0 26rem;
+		margin: 2rem 0 15rem;
 
 		@media (max-width: $md3+px) {
 			margin: 4rem 0 10rem;
@@ -141,7 +141,7 @@
 	}
 
 	&__content-categories {
-		margin-bottom: 12.6rem;
+		margin-bottom: 6.6rem;
 
 		@media (max-width: $md3+px) {
 			margin-bottom: 3.6rem;
@@ -205,6 +205,10 @@
 
 		@media (max-width: $md3+px) {
 			padding: 0 1.5rem;
+
+			& .container_large-1400{
+				padding: 0;
+			}
 		}
 
 		& .column {
@@ -220,7 +224,7 @@
 		}
 	}
 	&__content-pagination {
-		margin: 7.4rem 0 5rem;
+		margin: 1.4rem 0 2rem;
 	}
 
 

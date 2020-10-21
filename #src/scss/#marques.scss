@@ -2,23 +2,18 @@
 	&__hero {}
 
 	&__subhero {
-		margin: 17.5rem 0 25rem;
+		margin: 15.5rem 0 15rem;
 
 		@media (max-width: $md3+px) {
 			margin: 7.5rem 0 15rem;
 		}
 
 		@media (max-width: $md3+px) {
-			margin: 7.5rem 0 7rem;
+			margin: 5.5rem 0 5rem;
 		}
 	}
 
 	&__slider {
-		padding: 0 3rem;
-
-		@media (max-width: $md3+px) {
-			padding: 0 1.5rem;
-		}
 
 		&.slider-2 .swiper-pagination {
 			height: 3rem;
@@ -26,22 +21,22 @@
 	}
 
 	&__info-block {
-		margin: 24.5rem 0 8rem;
+		margin: 17.2rem 0 4rem;
 		background-color: #f9f9f9;
 		background-image: linear-gradient(180deg, #f9f9f9 0%, #ffffff 100%);
-		padding-top: 22rem;
+		padding-top: 17.6rem;
 
 		@media (max-width: 1023px) {
-			margin: 24rem 0 8rem;
+			margin: 14rem 0 8rem;
 		}
 
 		@media (max-width: $md3+px) {
-			margin: 16rem 0 8rem;
+			margin: 12rem 0 8rem;
 		}
 
 		@media (max-width: $md4+px) {
-			margin: 10rem 0 7rem;
-			padding-top: 11rem;
+			margin: 4rem 0 7rem;
+			padding-top: 6rem;
 		}
 
 
@@ -49,22 +44,23 @@
 
 
 	&__awards {
-		margin: 10rem 0 8rem;
+		margin: 4rem 0 8rem;
 		background-color: #f9f9f9;
 		background-image: linear-gradient(180deg, #f9f9f9 0%, #ffffff 100%);
-		padding-top: 22rem;
+		padding-top: 17.6rem;
 
 		@media (max-width: 1023px) {
-			margin: 10rem 0 8rem;
+			margin: 4rem 0 8rem;
 		}
 
 		@media (max-width: $md3+px) {
-			margin: 10rem 0 8rem;
+			margin: 0rem 0 8rem;
+			padding-top: 6rem;
 		}
 
 		@media (max-width: $md4+px) {
-			margin: 7rem 0 7rem;
-			padding-top: 11rem;
+			margin: 0rem 0 7rem;
+			padding-top: 6rem;
 		}
 
 
@@ -89,22 +85,18 @@
 
 		&_1 {
 			& .text-block_left .text-block__body {
-				padding-left: 2.5rem;
-
-				@media (max-width: $md3+px) {
-					padding-left: 1.5rem;
-				}
+				padding-left: 0rem;
 			}
 		}
 		&_2 {
-			padding-left: 11%;
+			padding-left: 7%;
 
 			@media (max-width: $md2+px) {
 				padding-left: 0;
 			}
 
 			& .reviews-slider {
-				margin-top: 9rem;
+				margin-top: 6rem;
 			}
 		}
 	}
@@ -117,7 +109,7 @@
 
 .info-block {
 	&__head {
-		margin-bottom: 9.4rem;
+		margin-bottom: 4.4rem;
 
 		@media (max-width: $md3+px) {
 			margin-bottom: 2.4rem;
@@ -129,8 +121,13 @@
 	&__body {}
 
 	&__nav {
-		margin: 0 auto 8.6rem;
+		margin: 0 auto 6.6rem;
 		max-width: 142rem;
+		padding: 0 4rem;
+
+		@media (max-width: $md2+px) {
+			padding: 0 0rem;
+		}
 
 		@media (max-width: $md3+px) {
 			margin: 0 auto 4.6rem;
@@ -162,7 +159,7 @@
 		display: inline-block;
 		color: #231f20;
 		font-family: $seconFontFamily;
-		font-size: 3rem;
+		font-size: 2.6rem;
 		font-weight: 300;
 		line-height: 1em;
 		border: 1px solid transparent;
@@ -263,7 +260,6 @@
 		}
 
 		& .column {
-			padding-left: 5.5%;
 
 			@media (max-width: $md3+px) {
 				padding-left: 1.5rem;
@@ -272,7 +268,6 @@
 		}
 	}
 	&__tabs-head {
-		padding-left: 4%;
 
 		@media (max-width: $md3+px) {
 			padding-left: 0;
@@ -301,13 +296,13 @@
 
 .awards-block {
 	@media (max-width: $md2+px) {
-		& .container_large-1700 {
+		& .container_large-1400 { 
 			padding: 0 1.5rem;
 		}
 	}
 
 	@media (max-width: $md3+px) {
-		& .container_large-1700 {
+		& .container_large-1400 {
 			padding: 0 0rem;
 		}
 	}
@@ -325,59 +320,6 @@
 		}
 	}
 	&__list {
-		& .card__img {
-			margin-bottom: 10.5rem;
-
-			@media (max-width: $md2+px) {
-				margin-bottom: 6rem;
-			}
-
-			@media (max-width: $md3+px) {
-				margin-bottom: 2rem;
-			}
-		}
-
-		& .card__suptitle {
-			color: #231f20;
-			font-size: 1.2rem;
-			font-weight: 700;
-			letter-spacing: 0.171rem;
-			text-transform: uppercase;
-			margin-bottom: 2.5rem;
-
-
-			@media (max-width: $md3+px) {
-				margin-bottom: 1.5rem;
-			}
-
-		}
-
-		& .card__title.title-3 {
-			color: #000000;
-			font-size: 2.5rem;
-			font-weight: 700;
-			letter-spacing: 0.521rem;
-			line-height: 4.2rem;
-			text-transform: uppercase;
-
-			@media (max-width: $md2+px) {
-				font-size: 2rem;
-				letter-spacing: 0.3rem;
-				line-height: 3.6rem;
-			}
-
-			@media (max-width: $md3+px) {
-				font-size: 2rem;
-				letter-spacing: 0.3rem;
-				line-height: 3.6rem;
-			}
-
-			@media (max-width: $md4+px) {
-				font-size: 1.8rem;
-				letter-spacing: 0.2rem;
-				line-height: 3rem;
-			}
-		}
 
 		@media (max-width: $md2+px) {
 			& .column {

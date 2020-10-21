@@ -15,35 +15,35 @@
 		margin: 15.3rem 0 15.3rem;
 
 		@media (max-width: $md3+px) {
-			margin: 12rem 0 12rem;
+			margin: 10rem 0 10rem;
 		}
 
 		@media (max-width: $md4+px) {
-			margin: 7rem 0 7rem;
+			margin: 5rem 0 5rem;
 		}
 	}
 
 	&__crafts-block {
-		margin: 21.5rem 0 8rem;
+		margin: 17.2rem 0 8rem;
 		background-color: #f9f9f9;
 		background-image: linear-gradient(180deg, #f9f9f9 0%, #ffffff 100%);
-		padding-top: 22rem;
+		padding-top: 17.6rem;
 
 		@media (max-width: 1023px) {
-			margin: 24rem 0 8rem;
+			margin: 14rem 0 8rem;
 		}
 
 		@media (max-width: $md3+px) {
-			margin: 16rem 0 8rem;
+			margin: 12rem 0 8rem;
 		}
 
 		@media (max-width: $md4+px) {
-			margin: 10rem 0 7rem;
-			padding-top: 11rem;
+			margin: 8rem 0 7rem;
+			padding-top: 9rem;
 		}
 
 		&-title {
-			margin-bottom: 17rem;
+			margin-bottom: 12rem;
 			text-align: center;
 
 			@media (max-width: 1023px) {
@@ -55,12 +55,12 @@
 			}
 		}
 
-		& .container_large-1700 {
+		& .container_large-1400 {
 			padding: 0;
 		}
 
 		& .card__img {
-			margin-bottom: 5rem;
+			margin-bottom: 3rem;
 
 			@media (max-width: $md3+px) {
 				margin-bottom: 1rem;
@@ -68,7 +68,7 @@
 		}
 
 		& .card__text-wrap {
-		    padding: 2rem 4.3rem;
+		    padding: 2rem 4rem;
 
 		    @media (max-width: $md3+px) {
 		    	padding: 2rem 2rem;
@@ -76,7 +76,7 @@
 		}
 
 		& .card__title {
-		    margin-bottom: 3rem;
+		    margin-bottom: 2rem;
 
 		    @media (max-width: $md3+px) {
 		    	margin-bottom: 1rem;
@@ -84,10 +84,10 @@
 		}
 
 		& .card__btn-wrap {
-		    margin-top: 7.3rem;
+		    margin-top: 5.3rem;
 
 		    @media (max-width: $md3+px) {
-		    	 margin-top: 4.3rem;
+		    	 margin-top: 3.3rem;
 		    }
 		}
 

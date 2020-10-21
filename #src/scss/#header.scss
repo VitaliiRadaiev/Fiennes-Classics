@@ -5,7 +5,7 @@
 		display: flex;
 		background: #fff;
 		align-items: center;
-		min-height: 21.2rem;
+		min-height: 16.9rem;
 		padding: 2rem 3.5rem;
 
 		@media (max-width: $md2+px) {
@@ -106,7 +106,7 @@
 
 				& .drop-menu {
 					opacity: 1;
-					top: 14.5rem;
+					top: 12.5rem;
 					pointer-events: auto;
 				}
 			}
@@ -197,7 +197,7 @@
 
 				& .drop-menu {
 					opacity: 1;
-					top: 14.5rem;
+					top: 12.5rem;
 					pointer-events: auto;
 					z-index: 2;
 				}
@@ -287,7 +287,7 @@
 
 .drop-menu {
 	position: absolute;
-	top: 17rem;
+	top: 15rem;
 	left: 50%;
 	transform: translateX(-50%);
 	background: #fff;

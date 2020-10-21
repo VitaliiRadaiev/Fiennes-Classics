@@ -114,7 +114,7 @@ a {
 
 
 .container {
-	max-width: 154rem;
+	max-width: 123.2rem;
 	margin: 0 auto;
 	width: 100%;
 	padding: 0 3rem;
@@ -126,7 +126,7 @@ a {
 	}
 
 	&_large {
-		max-width: 168rem;
+		max-width: 134.4rem;
 		padding: 0 3rem;
 		width: 100%;
 		margin: 0 auto;
@@ -137,8 +137,8 @@ a {
 		}
 	}
 
-	&_large-1700 {
-		max-width: 176rem;
+	&_large-1400 {
+		max-width: 140rem;
 		padding: 0 3rem;
 		width: 100%;
 		margin: 0 auto;
@@ -190,10 +190,10 @@ a {
 .title-1 {
 	color: #000000;
 	font-family: $mainFontFamily;
-	font-size: 5.8rem;
+	font-size: 5rem;
 	font-weight: 700;
 	letter-spacing: 0.45rem;
-	line-height: 7.4rem;
+	line-height: 7rem;
 	text-transform: uppercase;
 
 	@media (max-width: 1023px) {
@@ -217,11 +217,11 @@ a {
 .title-2 {
 	color: #231f20;
 	font-family: $mainFontFamily;
-	font-size: 6rem;
+	font-size: 5rem;
 	font-weight: 700;
 	letter-spacing: 0.857rem;
 	text-transform: uppercase;
-	line-height: 8rem;
+	line-height: 7rem;
 
 	@media (max-width: 1023px) {
 		font-size: 4rem;
@@ -249,7 +249,7 @@ a {
 	font-size: 3.5rem;
 	font-weight: 700;
 	letter-spacing: 0.5rem;
-	line-height: 6rem;
+	line-height: 5rem;
 	text-transform: uppercase;
 
 	@media (max-width: $md3+px) {
@@ -339,17 +339,17 @@ a {
 	&_left {
 		& .text-block__body {
 			align-items: flex-start;
-			padding-left: 8.5rem;
+			padding-left: 4.5rem;
 
 			@media (max-width: $md3+px) {
 				padding-left: 1.5rem;
 			}
 
 			& .text-block__suptitle {
-				margin-bottom: 2rem;
+				margin-bottom: 1rem;
 
 				@media (max-width: $md3+px) {
-					margin-bottom: 1rem;
+					margin-bottom: 0.5rem;
 				}
 			}
 
@@ -357,11 +357,11 @@ a {
 				max-width: 70rem;
 				letter-spacing: 0.7rem;
 				line-height: 5rem;
-				margin-bottom: 8rem;
+				margin-bottom: 4rem;
 
 				@media (max-width: $md3+px) {
 					line-height: 4rem;
-					margin-bottom: 4rem;
+					margin-bottom: 3rem;
 					letter-spacing: 0.5rem;
 				}
 
@@ -382,19 +382,19 @@ a {
 			text-align: right;
 
 			& .text-block__suptitle {
-				margin-bottom: 2rem;
+				margin-bottom: 1rem;
 			}
 
 			& .text-block__title {
 				max-width: 67rem;
 				letter-spacing: 0.7rem;
 				line-height: 5rem;
-				margin-bottom: 8rem;
+				margin-bottom: 4rem;
 
 
 				@media (max-width: $md3+px) {
 					line-height: 4rem;
-					margin-bottom: 4rem;
+					margin-bottom: 3rem;
 					letter-spacing: 0.5rem;
 				}
 
@@ -420,7 +420,7 @@ a {
 		width: 8.5rem;
 		height: 0.7rem;
 		background: #5a92ab;
-		margin-bottom: 4rem;
+		margin-bottom: 3rem;
 	}
 
 	&__suptitle {
@@ -435,15 +435,15 @@ a {
 		}
 	}
 	&__title {
-		margin-bottom: 6rem;
+		margin-bottom: 4rem;
 		max-width: 90rem;
 
 		@media (max-width: $md3+px) {
-			margin-bottom: 4rem;
+			margin-bottom: 3rem;
 		}
 
 		@media (max-width: $md2+px) {
-			margin-bottom: 2rem;
+			margin-bottom: 3rem;
 		}
 	}
 
@@ -454,7 +454,7 @@ a {
 		font-size: 2rem;
 		font-weight: 300;
 		line-height: 2.5rem;
-		margin-bottom: 9.8rem;
+		margin-bottom: 4.8rem;
 
 		& p {
 
@@ -492,8 +492,8 @@ a {
 
 	& .column {
 		width: 50%;
-		padding: 0 3rem;
-		margin-bottom: 19.5rem;
+		padding: 0 2.5rem;
+		margin-bottom: 10.5rem;
 
 		@media (max-width: $md3+px) {
 			padding: 0 1.5rem;
@@ -510,7 +510,7 @@ a {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	margin: 0 -3.5rem;
+	margin: 0 -2rem;
 
 	@media (max-width: 1440px) {
 		margin: 0 -2rem;
@@ -522,12 +522,12 @@ a {
 }
 .column {
 	width: 33.3333%;
-	padding: 0 3.5rem;
-	margin-bottom: 12.5rem;
+	padding: 0 2rem;
+	margin-bottom: 7.5rem;
 
 	@media (max-width: 1440px) {
 		padding: 0 2rem;
-		margin-bottom: 9rem;
+		margin-bottom: 5rem;
 	}
 
 	@media (max-width: 1023px) {
@@ -537,7 +537,7 @@ a {
 	@media (max-width: $md3+px) {
 			width: 100%;
 			padding: 0 1.5rem;
-			margin-bottom: 6rem;
+			margin-bottom: 4rem;
 	}
 }
 
@@ -554,15 +554,15 @@ a {
 		height: 0;
 		padding-bottom: 66%;
 		border-bottom: 10px solid #5a92ab;
-		margin-bottom: 5rem;
+		margin-bottom: 1rem;
 
 		@media (max-width: $md3+px) {
-			margin-bottom: 1rem;
+			margin-bottom: 0rem;
 		}
 	}
 
 	&__text-wrap {
-		padding: 2rem 5rem;
+		padding: 2rem 3rem;
 		flex: 1 1 auto;
 		display: flex;
 		flex-direction: column;
@@ -577,7 +577,7 @@ a {
 		font-weight: 500;
 		line-height: 3rem;
 		text-transform: uppercase;
-		margin-bottom: 3.7rem;
+		margin-bottom: 1.7rem;
 		flex: 1 1 auto;
 		@media (max-width: $md4+px) {
 			margin-bottom: 1.5rem;
@@ -670,14 +670,10 @@ a {
 	&__img {
 		height: 0;
 		padding-bottom: 63%;
-		margin-bottom: 12.9rem;
-
-		@media (max-width: $md2+px) {
-			margin-bottom: 6rem;
-		}
+		margin-bottom: 3rem;
 
 		@media (max-width: $md3+px) {
-			margin-bottom: 2rem;
+			margin-bottom: 1rem;
 		}
 	}
 
@@ -685,11 +681,7 @@ a {
 		flex: 1 1 auto;
 		display: flex;
 		flex-direction: column;
-		padding: 2rem 6.8rem;
-
-		@media (max-width: $md2+px) {
-			padding: 2rem 4rem;
-		}
+		padding: 2rem 4rem;
 
 		@media (max-width: $md3+px) {
 			padding: 2rem 2rem;
@@ -723,9 +715,9 @@ a {
 		}
 	}
 	&__title {
-		margin-bottom: 5rem;
 		max-width: 58.5rem;
 		flex: 1 1 auto;
+		margin-bottom: 2rem;
 
 		@media (max-width: $md3+px) {
 			margin-bottom: 1rem;
@@ -736,15 +728,15 @@ a {
 		}
 	}
 	&__btn-wrap {
-		margin-top: 10.5rem;
+		margin-top: 5.3rem;
 
 		@media (max-width: $md3+px) {
-			 margin-top: 4.3rem;
+			 margin-top: 3.3rem;
 		}
 	}
 
 	& .line {
-		margin-bottom: 3.5rem;
+		margin-bottom: 2.5rem;
 	}
 }
 
@@ -818,7 +810,7 @@ a {
 
 	&__body {
 		width: 100%;
-		height: 95vh;	
+		height: 80vh;	
 
 		@media (max-width: $md3+px) {
 			height: 60vh;	
@@ -946,7 +938,7 @@ a {
 	}
 	&__body {
 		position: relative;
-		height: 95vh;
+		height: 80vh;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -1051,14 +1043,14 @@ a {
 	&__text {
 		color: #231f20;
 		font-family: $seconFontFamily;
-		font-size: 3.5rem;
+		font-size: 2.8rem;
 		font-weight: 300;
-		line-height: 4.6rem;
+		line-height: 4rem;
 		margin-bottom: 1rem;
 
 		& > span {
 			color: #5a92ab;
-			font-size: 5.5rem;
+			font-size: 4.8rem;
 		}
 
 		@media (max-width: $md3+px) {
