@@ -1,0 +1,504 @@
+.home {
+	&__hero {
+		margin-bottom: 4rem;
+	}
+
+	&__text-block {
+		margin: 19.3rem 0 20rem;
+
+		@media (max-width: $md3+px) {
+			margin: 12rem 0 12rem;
+		}
+
+		@media (max-width: $md4+px) {
+			margin: 7rem 0 7rem;
+		}
+	}
+
+	&__slider {
+		padding: 0 3rem;
+
+		margin: 0 auto;
+
+		max-width: 176rem;
+
+		@media (max-width: $md3+px) {
+			padding: 0 1.5rem;
+		}
+	}
+
+	&__text-block-2 {
+		margin: 13.3rem 0 13.3rem;
+
+		@media (max-width: $md3+px) {
+			margin: 12rem 0 12rem;
+		}
+
+		@media (max-width: $md4+px) {
+			margin: 7rem 0 7rem;
+		}
+	}
+
+	&__video {
+		margin: 7rem 0 17.6rem;
+
+		@media (max-width: $md3+px) {
+			margin: 7rem 0 12rem;
+		}
+
+		@media (max-width: $md4+px) {
+			margin: 7rem 0 7rem;
+		}
+	}
+
+	&__slider-2 {
+		margin: 7rem auto;
+
+		padding: 0 3rem;
+
+		max-width: 176rem;
+
+		@media (max-width: $md3+px) {
+			padding: 0 1.5rem;
+		}
+	}
+
+	&__text-block-3 {
+		margin: 13.3rem 0 13.3rem;
+
+		@media (max-width: $md3+px) {
+			margin: 12rem 0 12rem;
+		}
+
+		@media (max-width: $md4+px) {
+			margin: 7rem 0 7rem;
+		}
+	}
+
+
+	&__founder {
+		padding: 18rem 1.5rem 20rem;
+		background-color: #f1f0f0;
+		text-align: center;
+
+		@media (max-width: $md3+px) {
+			padding: 12rem 1.5rem 12rem;
+		}
+	}
+
+	&__founder-suptitle {
+		margin-bottom: 4.5rem;
+
+		@media (max-width: $md3+px) {
+			margin-bottom: 2rem;
+		}
+	}
+	&__founder-text {
+		color: #231f20;
+		font-size: 3rem;
+		font-weight: 500;
+		letter-spacing: 0.249rem;
+		max-width: 113.2rem;
+		margin: 0 auto;
+		line-height: 3.6rem;
+
+		& > p {
+			&:not(:last-child) {
+				margin-bottom: 3rem;
+
+				@media (max-width: $md3+px) {
+					margin-bottom: 2rem;
+				}
+			}
+		}
+
+		@media (max-width: $md3+px) {
+			font-size: 1.8rem;
+			line-height: 3rem;
+		}
+
+		@media (max-width: $md4+px) {
+			font-size: 1.4rem;
+			line-height: 2rem;
+		}
+	}
+
+
+
+	&__journal {
+		margin: 23.5rem 0 20.5rem;
+		padding: 0 4.6rem;
+
+		@media (max-width: 1440px) {
+			margin: 15rem 0 15rem;
+		}
+
+		@media (max-width: $md3+px) {
+			padding: 0 1.5rem;
+			margin: 10rem 0 10rem;
+		}
+
+		&-suptitle {
+			margin-bottom: 2rem;
+			text-align: center;
+
+			@media (max-width: $md3+px) {
+				margin-bottom: 0;
+			}
+		}
+		&-title {
+			margin-bottom: 11rem;
+			text-align: center;
+
+			@media (max-width: $md3+px) {
+				margin-bottom: 4rem;
+			}
+
+			@media (max-width: $md4+px) {
+				margin-bottom: 3rem;
+			}
+		}
+		&-btn-wrap {
+			text-align: center;
+		}
+	}
+
+
+}
+
+
+
+.hero-slider {
+	&__body {
+		padding: 0 3rem;
+
+		@media (max-width: $md3+px) {
+			padding: 0 1.5rem;
+		}
+
+		& .swiper-slide {
+			position: relative;
+			height: 100vh;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			text-align: center;
+			padding: 7rem 1.5rem;
+			border-bottom: 10px solid #5a92ab;
+			min-height: 48rem;
+
+			@media (max-width: $md3+px) {
+				height: 60vh;
+			}
+		}
+
+		& .swiper-pagination  {
+			bottom: 1.7rem;
+			& > span {
+				position: relative;
+				height: 0.3rem;
+				width: 5.5%;
+				z-index: 5;
+				opacity: 1;
+				border-radius: 0;
+				padding: 2.5rem 0;
+				background: transparent;
+				margin: 0px 6px !important;
+
+				&:after {
+					position: absolute;
+					content: '';
+					top: 50%;
+					left: 0;
+					transform: translateY(-50%);
+					width: 100%;
+					z-index: 1;
+					background: rgba(255, 255, 255, 0.57);
+					height: 0.3rem;
+				}
+
+				&.swiper-pagination-bullet-active:before {
+					position: absolute;
+					content: '';
+					top: 50%;
+					transform: translateY(-50%);
+					left: 0;
+					height: 0.3rem;
+					width: 50%;
+					background: #fff;
+					z-index: 2;
+				}
+			}
+		}
+	}
+	&__img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+
+		&:before {
+			position: absolute;
+			content: '';
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(#000, 0.1);
+			z-index: 1;
+		}
+	}
+
+	&__text-wrap {
+		position: relative;
+		z-index: 2;
+		color: #fff;
+
+	}
+	&__suptitle {
+		color: #ffffff;
+		font-size: 1.5rem;
+		font-weight: 700;
+		letter-spacing: 0.214rem;
+		line-height: 1.8rem;
+		text-transform: uppercase;
+		margin-bottom: 2rem;
+
+		@media (max-width: $md3+px) {
+			margin-bottom: 1.5rem;
+		}
+
+		@media (max-width: $md4+px) {
+			font-size: 1.2rem;
+		}
+	}
+
+	&__title {
+		font-size: 5.8rem;
+		font-weight: 700;
+		letter-spacing: 0.845rem;
+		line-height: 6.5rem;
+		text-transform: uppercase;
+		margin-bottom: 8rem;
+		margin-top: 2rem;
+
+		@media (max-width: $md3+px) {
+			font-size: 3.6rem;
+			font-weight: 700;
+			letter-spacing: 0.645rem;
+			line-height: 4.4rem;
+			margin-bottom: 5rem;
+			margin-top: 1.5rem;
+		}
+
+		@media (max-width: $md4+px) {
+			font-size: 2.6rem;
+			font-weight: 700;
+			letter-spacing: 0.445rem;
+			line-height: 3.4rem;
+			margin-bottom: 3rem;
+			margin-top: 1.5rem;
+		}
+	}
+
+	&__btn-wrap {
+		@media (max-width: $md3+px) {
+			& .btn-default {
+				font-size: 1.2rem;
+			}
+		}
+
+		@media (max-width: $md4+px) {
+			& .btn-default {
+				font-size: 1rem;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+// == slider ======================================================================
+
+.slider {
+	&__img {
+		height: 100vh;
+		min-height: 48rem;
+		background-color: #b9b9b9;
+
+		@media (max-width: $md3+px) {
+			height: 60vh;
+		}
+	}
+
+	& .swiper-pagination  {
+		bottom: 1.7rem;
+		& > span {
+			position: relative;
+			height: 0.3rem;
+			width: 5.5%;
+			z-index: 5;
+			opacity: 1;
+			border-radius: 0;
+			padding: 2.5rem 0;
+			background: transparent;
+			margin: 0px 6px !important;
+
+			&:after {
+				position: absolute;
+				content: '';
+				top: 50%;
+				left: 0;
+				transform: translateY(-50%);
+				width: 100%;
+				z-index: 1;
+				background: rgba(255, 255, 255, 0.57);
+				height: 0.3rem;
+			}
+
+			&.swiper-pagination-bullet-active:before {
+				position: absolute;
+				content: '';
+				top: 50%;
+				transform: translateY(-50%);
+				left: 0;
+				height: 0.3rem;
+				width: 50%;
+				background: #fff;
+				z-index: 2;
+			}
+		}
+	}
+}
+
+
+// == and slider ======================================================================
+
+
+// == video block ======================================================================
+.video-block {
+	&__body {
+		position: relative;
+
+		& .plyr__video-wrapper {
+			height: 100vh;
+			min-height: 48rem;
+
+			@media (max-width: $md3+px) {
+				height: 60vh;
+			}
+		}
+
+		& .plyr__poster {
+			background-size: cover;
+		}
+
+		&  video {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+
+		&  iframe {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+	}
+}
+
+// == and video block ======================================================================
+
+
+// == slider-2 ======================================================================
+.slider-2 {
+	margin-left: 10vw;
+
+	@media (max-width: $md3+px) {
+		margin-left: 0;
+	}
+
+	& .swiper-container {
+
+	}
+
+	& .swiper-slide {
+		width: 87%;
+	}
+	& .swiper-pagination {
+		position: static;
+		display: flex;
+		justify-content: center;
+		align-items: flex-end;
+		height: 9rem;
+		width: 87%;
+		margin-bottom: 0.5rem;
+
+		@media (max-width: $md3+px) {
+			height: 6rem;
+		}
+
+		@media (max-width: $md3+px) {
+			height: 4rem;
+		}
+
+		& > span {
+			border-radius: 0;
+			flex: 1 1 auto;
+			margin: 0 !important;
+			height: 2px;
+			background: #5a92ab;
+			position: relative;
+
+			&.swiper-pagination-bullet-active {
+				background: transparent;
+
+				&:before {
+					position: absolute;
+					content: '';
+					top: 50%;
+					left: 0;
+					width: 100%;
+					height: 0.7rem;
+					background: #5a92ab;
+					transform: translateY(-50%);
+				}
+			}
+		}
+	}
+
+	&__img {
+		background-color: #b9b9b9;
+		min-height: calc(100vh - 9rem);
+
+		@media (max-width: $md3+px) {
+			min-height: calc(60vh - 6rem);
+		}
+
+		@media (max-width: $md4+px) {
+			min-height: calc(50vh - 4rem);
+		}
+	}
+
+	&__text {
+		padding: 2rem 0;
+		max-width: 80rem;
+		font-family: $seconFontFamily;
+
+		font-size: 1.5rem;
+		line-height: 2.3rem;
+		letter-spacing: 0.3rem;
+		margin: 0 auto;
+	}
+
+}
+
+// == and slider-2 ======================================================================

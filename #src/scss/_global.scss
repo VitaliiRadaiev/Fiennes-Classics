@@ -1,0 +1,1137 @@
+* {
+	padding: 0px;
+	margin: 0px;
+	border: 0px;
+}
+*,
+*:before,
+*:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,
+:active {
+	outline: none;
+}
+a:focus,
+a:active {
+	outline: none;
+}
+aside,
+nav,
+footer,
+header,
+section {
+	display: block;
+}
+html {
+	font-size: 10px;
+}
+html,
+body {
+	height: 100%;
+	min-width: $minwidth;
+	margin: 0 auto;
+}
+body {
+	line-height: 1;
+	font-family: $mainFontFamily;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	color: #000;
+	font-size: 1.6rem;
+	font-family: $mainFontFamily;
+	&.lock {
+		overflow: hidden;
+	}
+
+}
+
+input,
+button,
+textarea {
+	font-family: $mainFontFamily;
+}
+input::-ms-clear {
+	display: none;
+}
+button {
+	cursor: pointer;
+}
+button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+a,
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+ul li {
+	list-style: none;
+}
+img {
+	vertical-align: top;
+}
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6 {
+// 	font-weight: inherit;
+// 	font-size: inherit;
+// }
+
+a {
+	color: $mainColor;
+	font-weight: 500;
+
+	@media (min-width: 992px) {
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+
+
+// //<ОБОЛОЧКА>===========================================================================================================
+// .wrapper {
+// 	width: 100%;
+// 	min-height: 100%;
+// 	overflow: hidden;
+// 	&.loaded {
+// 	}
+// }
+// //</ОБОЛОЧКА>===========================================================================================================
+.page {
+	height: 100%;
+}
+
+
+.container {
+	max-width: 154rem;
+	margin: 0 auto;
+	width: 100%;
+	padding: 0 3rem;
+
+	@media (max-width: $md3+px) {
+		margin: 0 auto;
+		width: 100%;
+		padding: 0 1.5rem;
+	}
+
+	&_large {
+		max-width: 168rem;
+		padding: 0 3rem;
+		width: 100%;
+		margin: 0 auto;
+		@media (max-width: $md3+px) {
+			margin: 0 auto;
+			width: 100%;
+			padding: 0 1.5rem;
+		}
+	}
+
+	&_large-1700 {
+		max-width: 176rem;
+		padding: 0 3rem;
+		width: 100%;
+		margin: 0 auto;
+		@media (max-width: $md3+px) {
+			margin: 0 auto;
+			width: 100%;
+			padding: 0 1.5rem;
+		}
+	}
+
+	&_small {
+		max-width: 89rem;
+		padding: 0 1.5rem;
+		width: 100%;
+		margin: 0 auto;
+	}
+}
+
+.ibg {
+	position: relative;
+	img {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		object-fit: cover;
+	}
+}
+
+.logo {
+	max-width: 22.6rem;
+	width: 100%;
+
+	& img {
+		width: 100%;
+	}
+}
+
+
+.line {
+	display: inline-block;
+	width: 8rem;
+	height: 0.7rem;
+	background: $mainColor;
+}
+
+// === title ========================================================================
+.title-1 {
+	color: #000000;
+	font-family: $mainFontFamily;
+	font-size: 5.8rem;
+	font-weight: 700;
+	letter-spacing: 0.45rem;
+	line-height: 7.4rem;
+	text-transform: uppercase;
+
+	@media (max-width: 1023px) {
+		font-size: 4rem;
+		letter-spacing: 0.657rem;
+		line-height: 6rem;
+	}
+
+	@media (max-width: $md3+px) {
+		font-size: 3rem;
+		letter-spacing: 0.457rem;
+		line-height: 4rem;
+	}
+
+	@media (max-width: $md4+px) {
+		font-size: 2.2rem;
+		letter-spacing: 0.357rem;
+		line-height: 3rem;
+	}
+}
+.title-2 {
+	color: #231f20;
+	font-family: $mainFontFamily;
+	font-size: 6rem;
+	font-weight: 700;
+	letter-spacing: 0.857rem;
+	text-transform: uppercase;
+	line-height: 8rem;
+
+	@media (max-width: 1023px) {
+		font-size: 4rem;
+		letter-spacing: 0.657rem;
+		line-height: 6rem;
+	}
+
+	@media (max-width: $md3+px) {
+		font-size: 3rem;
+		letter-spacing: 0.457rem;
+		line-height: 4rem;
+	}
+
+	@media (max-width: $md4+px) {
+		font-size: 2.2rem;
+		letter-spacing: 0.357rem;
+		line-height: 3rem;
+	}
+
+}
+
+.title-3 {
+	color: #231f20;
+	font-family: $mainFontFamily;
+	font-size: 3.5rem;
+	font-weight: 700;
+	letter-spacing: 0.5rem;
+	line-height: 6rem;
+	text-transform: uppercase;
+
+	@media (max-width: $md3+px) {
+		font-size: 2.5rem;
+		letter-spacing: 0.3rem;
+		line-height: 4rem;
+	}
+
+	@media (max-width: $md4+px) {
+		font-size: 2rem;
+		letter-spacing: 0.2rem;
+		line-height: 3rem;
+	}
+}
+.suptitle {
+	color: #231f20;
+	font-family: $mainFontFamily;
+	font-size: 1.5rem;
+	font-weight: 700;
+	letter-spacing: 0.214rem;
+	line-height: 2rem;
+	text-transform: uppercase;
+
+	@media (max-width: $md3+px) {
+		font-size: 1.4rem;
+		letter-spacing: 0.3rem;
+	}
+
+	@media (max-width: $md4+px) {
+		font-size: 1.2rem;
+		letter-spacing: 0.2rem;
+	}
+}
+// === and title ========================================================================
+
+
+
+// === btn ========================================================================
+.btn-default {
+	border: 1px solid #5a91ab;
+	color: #5a91ab;
+	font-size: 1.4rem;
+	font-weight: 700;
+	letter-spacing: 0.35rem;
+	line-height: 1.2em;
+	text-transform: uppercase;
+	padding: 1.3em 3.6em;
+	transition: all .2s ease;
+	display: inline-block;
+	white-space: nowrap;
+
+	@media (min-width: 992px) {
+		&:hover {
+			background: rgba($mainColor, 0.6);
+			color: #fff;
+			text-decoration: none;
+		}
+	}
+
+	&:active {
+		background: rgba(#000, 0.1);
+	}
+
+	&_white {
+		border: 1px solid #fff;
+		color: #fff;
+	}
+
+	@media (max-width: $md4+px) {
+		font-size: 1rem;
+	}
+}
+
+// === and btn ========================================================================
+
+
+// === text-block ========================================================================
+.text-block {
+	&_center {
+		text-align: center;
+
+		& .text-block__body {
+			align-items: center;
+		}
+	}
+
+	&_left {
+		& .text-block__body {
+			align-items: flex-start;
+			padding-left: 8.5rem;
+
+			@media (max-width: $md3+px) {
+				padding-left: 1.5rem;
+			}
+
+			& .text-block__suptitle {
+				margin-bottom: 2rem;
+
+				@media (max-width: $md3+px) {
+					margin-bottom: 1rem;
+				}
+			}
+
+			& .text-block__title {
+				max-width: 70rem;
+				letter-spacing: 0.7rem;
+				line-height: 5rem;
+				margin-bottom: 8rem;
+
+				@media (max-width: $md3+px) {
+					line-height: 4rem;
+					margin-bottom: 4rem;
+					letter-spacing: 0.5rem;
+				}
+
+				@media (max-width: $md3+px) {
+					line-height: 3rem;
+				}
+			}
+
+			& .text-block__text {
+				max-width: 60rem;
+			}
+		}
+	}
+
+	&_right {
+		& .text-block__body {
+			align-items: flex-end;
+			text-align: right;
+
+			& .text-block__suptitle {
+				margin-bottom: 2rem;
+			}
+
+			& .text-block__title {
+				max-width: 67rem;
+				letter-spacing: 0.7rem;
+				line-height: 5rem;
+				margin-bottom: 8rem;
+
+
+				@media (max-width: $md3+px) {
+					line-height: 4rem;
+					margin-bottom: 4rem;
+					letter-spacing: 0.5rem;
+				}
+
+				@media (max-width: $md3+px) {
+					line-height: 3rem;
+				}
+			}
+
+			& .text-block__text {
+				max-width: 60rem;
+			}
+		}
+	}
+
+	&__body {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__line {
+		display: inline-block;
+		/* Style for "Line 4" */
+		width: 8.5rem;
+		height: 0.7rem;
+		background: #5a92ab;
+		margin-bottom: 4rem;
+	}
+
+	&__suptitle {
+		margin-bottom: 1rem;
+
+		@media (max-width: $md3+px) {
+			margin-bottom: 0.8rem;
+		}
+
+		@media (max-width: $md4+px) {
+			margin-bottom: 0.5rem;
+		}
+	}
+	&__title {
+		margin-bottom: 6rem;
+		max-width: 90rem;
+
+		@media (max-width: $md3+px) {
+			margin-bottom: 4rem;
+		}
+
+		@media (max-width: $md2+px) {
+			margin-bottom: 2rem;
+		}
+	}
+
+	&__text {
+		max-width: 908px;
+		color: #231f20;
+		font-family: $seconFontFamily;
+		font-size: 2rem;
+		font-weight: 300;
+		line-height: 2.5rem;
+		margin-bottom: 9.8rem;
+
+		& p {
+
+			&:not(:last-child) {
+				margin: 0 0 1.5rem; 
+			}
+		}
+
+		@media (max-width: $md3+px) {
+			font-size: 1.6rem;
+			font-weight: 300;
+			line-height: 2rem;
+			margin-bottom: 5.8rem;
+		}
+
+		@media (max-width: $md3+px) {
+			font-size: 1.6rem;
+			font-weight: 300;
+			line-height: 2rem;
+			margin-bottom: 3.8rem;
+		}
+	}
+
+	&__btn-wrap {}
+}
+// === and text-block ========================================================================
+
+
+
+// === block-columns-2 ========================================================================
+.block-columns-2 {
+	display: flex;
+	width: 100%;
+	flex-wrap: wrap;
+
+	& .column {
+		width: 50%;
+		padding: 0 3rem;
+		margin-bottom: 19.5rem;
+
+		@media (max-width: $md3+px) {
+			padding: 0 1.5rem;
+			width: 100%;
+			margin-bottom: 7.5rem;
+		}
+	}
+}
+
+// === and block-columns-2 ========================================================================
+
+// === block-columns-3 ========================================================================
+.block-columns-3 {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 0 -3.5rem;
+
+	@media (max-width: 1440px) {
+		margin: 0 -2rem;
+	}
+
+	@media (max-width: $md3+px) {
+		margin: 0 -1.5rem;
+	}
+}
+.column {
+	width: 33.3333%;
+	padding: 0 3.5rem;
+	margin-bottom: 12.5rem;
+
+	@media (max-width: 1440px) {
+		padding: 0 2rem;
+		margin-bottom: 9rem;
+	}
+
+	@media (max-width: 1023px) {
+			width: 50%;
+	}
+
+	@media (max-width: $md3+px) {
+			width: 100%;
+			padding: 0 1.5rem;
+			margin-bottom: 6rem;
+	}
+}
+
+// === and block-columns-3 ========================================================================
+
+
+// === card-journal ========================================================================
+.card-journal {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	&__img {
+		position: relative;
+		height: 0;
+		padding-bottom: 66%;
+		border-bottom: 10px solid #5a92ab;
+		margin-bottom: 5rem;
+
+		@media (max-width: $md3+px) {
+			margin-bottom: 1rem;
+		}
+	}
+
+	&__text-wrap {
+		padding: 2rem 5rem;
+		flex: 1 1 auto;
+		display: flex;
+		flex-direction: column;
+		@media (max-width: 1440px) {
+			padding: 2rem 1rem;
+		}
+	}
+
+	&__title {
+		color: #000000;
+		font-size: 1.8rem;
+		font-weight: 500;
+		line-height: 3rem;
+		text-transform: uppercase;
+		margin-bottom: 3.7rem;
+		flex: 1 1 auto;
+		@media (max-width: $md4+px) {
+			margin-bottom: 1.5rem;
+		}
+	}
+	&__text {
+		color: #000000;
+		font-family: $seconFontFamily;
+		font-size: 1.5rem;
+		font-weight: 500;
+		line-height: 2rem;
+	}
+
+	&__bottom {
+		margin-top: 5rem;
+	}
+	&__bottom-row {
+		&_1 {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+		&_2 {}
+	}
+	&__news {
+		flex: 0 0 auto;
+		margin-right: 1.5rem;
+		margin-bottom: 2.4rem;
+		color: #000000;
+		font-size: 1.4rem;
+		font-weight: 500;
+		line-height: 1.6rem;
+
+		& > a {
+			color: $mainColor;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+	&__date {
+		flex: 0 0 auto;
+		margin-bottom: 2rem;
+		color: #000000;
+		font-size: 1.4rem;
+		font-weight: 500;
+		line-height: 1.6rem;
+		margin-right: 5%;
+	}
+	&__hr {
+		height: 1px;
+		width: 100%;
+		background: $mainColor;
+	}
+
+	&__sample-name {
+
+		padding: 1.5rem 0;
+		display: flex;
+		align-items: center;
+		color: #000000;
+		font-size: 1.4rem;
+		font-weight: 500;
+		line-height: 1.6rem;
+		text-transform: uppercase;
+
+		& > span {
+			flex: 0 0 auto;
+			display: inline-block;
+			width: 3.2rem;
+			height: 3.2rem;
+			border: 1px solid #979797;
+			background-color: #d8d8d8;
+			margin-right: 1.7rem;
+			border-radius: 50%;
+		}
+	}
+}
+// === and card-journal ========================================================================
+
+
+
+
+
+// === card ========================================================================
+.card {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	&__img {
+		height: 0;
+		padding-bottom: 63%;
+		margin-bottom: 12.9rem;
+
+		@media (max-width: $md2+px) {
+			margin-bottom: 6rem;
+		}
+
+		@media (max-width: $md3+px) {
+			margin-bottom: 2rem;
+		}
+	}
+
+	&__text-wrap {
+		flex: 1 1 auto;
+		display: flex;
+		flex-direction: column;
+		padding: 2rem 6.8rem;
+
+		@media (max-width: $md2+px) {
+			padding: 2rem 4rem;
+		}
+
+		@media (max-width: $md3+px) {
+			padding: 2rem 2rem;
+		}
+
+		& > p {
+			color: #231f20;
+			font-family: $seconFontFamily;
+			font-size: 2rem;
+			font-weight: 300;
+			line-height: 2.6rem;
+			max-width: 58.5rem;
+
+			&:not(:last-child) {
+				margin-bottom: 2rem;
+			}
+
+			@media (max-width: $md3+px) {
+				font-size: 1.6rem;
+				line-height: 2rem;
+			}
+		}
+	}
+	&__suptitle {
+		margin-bottom: 1.5rem;
+		max-width: 58.5rem;
+		font-weight: 700;
+
+		@media (max-width: $md3+px) {
+			margin-bottom: 1rem;
+		}
+	}
+	&__title {
+		margin-bottom: 5rem;
+		max-width: 58.5rem;
+		flex: 1 1 auto;
+
+		@media (max-width: $md3+px) {
+			margin-bottom: 1rem;
+		}
+
+		&.title-3 {
+			letter-spacing: 0.2rem;
+		}
+	}
+	&__btn-wrap {
+		margin-top: 10.5rem;
+
+		@media (max-width: $md3+px) {
+			 margin-top: 4.3rem;
+		}
+	}
+
+	& .line {
+		margin-bottom: 3.5rem;
+	}
+}
+
+// === and card ========================================================================
+
+
+
+
+
+// === social-list ========================================================================
+.social-list {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	padding: 2rem 0;
+	@media (max-width: 1400px) {
+		justify-content: center;
+	}
+	& > a {
+		display: inline-flex;
+		min-height: 4rem;
+		min-width: 4rem;
+		justify-content: center;
+		align-items: center;
+		transition: all .2s ease;
+
+		&:not(:last-child) {
+			margin-right: 1.42rem;
+		}
+		& svg path {
+			fill: #d8d8d8;
+
+			&.play {
+				fill: #fff;
+			}
+		}
+
+		@media (min-width: 992px) {
+			&:hover {
+				
+				& svg path {
+					fill: $mainColor;
+					&.play {
+						fill: #fff;
+					}
+				}
+			}
+		}
+
+	}
+}
+// === and social-list ========================================================================
+
+
+
+// === one-img-block ========================================================================
+.one-img-block {
+	& img {
+		width: 100%;
+	}
+}
+// === and one-img-block ========================================================================
+
+// === img-full-screen ========================================================================
+.img-full-screen {
+	padding: 0 3rem;
+
+	@media (max-width: $md3+px) {
+		padding: 0 1.5rem;
+	}
+
+	&__body {
+		width: 100%;
+		height: 95vh;	
+
+		@media (max-width: $md3+px) {
+			height: 60vh;	
+		}
+	}
+}
+
+// === and img-full-screen ========================================================================
+
+
+
+// === three-img-block ========================================================================
+.three-img-block {
+	&_reverse {
+		& .three-img-block__body {
+			flex-direction: column-reverse;
+		}
+
+		& .three-img-block__row_1 {
+			margin-bottom: 0;
+			margin-top: 3.6rem;
+
+			@media (max-width: $md3+px) {
+				margin-top: 1.5rem;
+			}
+		}
+	}
+
+	&__body {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+	}
+	&__row {
+		&_1 {
+			margin-bottom: 3.6rem;
+			display: flex;
+			justify-content: space-between;
+
+			@media (max-width: $md3+px) {
+				margin-bottom: 1.5rem;
+			}
+		}
+		&_2 {}
+	}
+
+	&__column {
+		width: calc(50% - 1.6rem);
+
+		@media (max-width: $md3+px) {
+			width: calc(50% - 0.75rem);
+		}
+	}
+	&__smal {
+		height: 0;
+		padding-bottom: 68%;
+		background: #ccc;
+	}
+	&__big {
+		height: 0;
+		padding-bottom: 48%;
+		background: #ccc;
+	}
+}
+
+// === and three-img-block ========================================================================
+
+
+
+
+// === pagination ========================================================================
+.pagination {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+
+	& > li {
+		flex: 0 0 auto;
+		margin-bottom: 1.6rem;
+
+		&:not(:last-child) {
+			margin-right: 2.2rem;
+		}
+
+		&.active {
+			& > a {
+				background: $mainColor;
+				color: #fff;
+			}
+		}
+
+		& > a {
+			display: inline-flex;
+			min-width: 4.9rem;
+			min-height: 4.2rem;
+			border: 1px solid $mainColor;
+			justify-content: center;
+			align-items: center;
+			padding: 1rem;
+			color: $mainColor;
+			font-size: 1.4rem;
+			font-weight: 700;
+			transition: all .2s ease;
+
+			@media (min-width: 992px) {
+				&:hover {
+					background: $mainColor;
+					color: #fff;
+				}
+			}
+		}
+	}
+}
+
+// === and pagination ========================================================================
+
+
+
+// === hero ========================================================================
+.hero {
+	padding: 0 3rem;
+
+	@media (max-width: $md3+px) {
+		padding: 0 1.5rem;
+	}
+	&__body {
+		position: relative;
+		height: 95vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		text-align: center;
+		padding: 7rem 1.5rem;
+		border-bottom: 10px solid #5a92ab;
+		min-height: 48rem;
+
+		@media (max-width: $md3+px) {
+			height: 60vh;
+		}
+	}
+	&__img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+
+		&:before {
+			position: absolute;
+			content: '';
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(#000, 0.1);
+			z-index: 1;
+		}
+	}
+	&__text-wrap {
+		position: relative;
+		z-index: 2;
+		color: #fff;
+	}
+	&__suptitle {
+		color: #ffffff;
+		font-size: 1.5rem;
+		font-weight: 700;
+		letter-spacing: 0.214rem;
+		line-height: 1.8rem;
+		text-transform: uppercase;
+		margin-bottom: 2rem;
+
+		@media (max-width: $md3+px) {
+			margin-bottom: 1.5rem;
+		}
+
+		@media (max-width: $md4+px) {
+			font-size: 1.2rem;
+		}
+	}
+	&__title {
+		font-size: 5.8rem;
+		font-weight: 700;
+		letter-spacing: 0.845rem;
+		line-height: 6.5rem;
+		text-transform: uppercase;
+		margin-bottom: 8rem;
+		margin-top: 2rem;
+
+		@media (max-width: $md3+px) {
+			font-size: 3.6rem;
+			font-weight: 700;
+			letter-spacing: 0.645rem;
+			line-height: 4.4rem;
+			margin-bottom: 5rem;
+			margin-top: 1.5rem;
+		}
+
+		@media (max-width: $md4+px) {
+			font-size: 2.6rem;
+			font-weight: 700;
+			letter-spacing: 0.445rem;
+			line-height: 3.4rem;
+			margin-bottom: 3rem;
+			margin-top: 1.5rem;
+		}
+	}
+	&__btn-wrap {
+		@media (max-width: $md3+px) {
+			& .btn-default {
+				font-size: 1.2rem;
+			}
+		}
+
+		@media (max-width: $md4+px) {
+			& .btn-default {
+				font-size: 1rem;
+			}
+		}
+	}
+}
+
+// === and hero ========================================================================
+
+
+
+// === reviews slider ========================================================================
+.reviews-slider {
+	width: 100%;
+	&__text {
+		color: #231f20;
+		font-family: $seconFontFamily;
+		font-size: 3.5rem;
+		font-weight: 300;
+		line-height: 4.6rem;
+		margin-bottom: 1rem;
+
+		& > span {
+			color: #5a92ab;
+			font-size: 5.5rem;
+		}
+
+		@media (max-width: $md3+px) {
+			font-size: 2.5rem;
+			line-height: 3.6rem;
+
+			& > span {
+				font-size: 4.5rem;
+			}
+		}
+
+		@media (max-width: $md4+px) {
+			font-size: 2rem;
+			line-height: 3rem;
+
+			& > span {
+				font-size: 4rem;
+			}
+		}
+	}
+	&__name {
+		font-size: 1.5rem;
+		font-weight: 500;
+	}
+
+	& .swiper-pagination  {
+		margin-top: 5.5rem;
+		position: static;
+		text-align: left;
+		display: flex;
+		align-items: center;
+
+		@media (max-width: $md4+px) {
+			margin-top: 1.5rem;
+		}
+
+		& > span {
+			flex: 1 1 auto;
+			position: relative;
+			height: 0.3rem;
+			max-width: 17.5%;
+			z-index: 5;
+			opacity: 1;
+			border-radius: 0;
+			padding: 2.5rem 0;
+			background: transparent;
+			margin: 0px 6px !important;
+
+			&:after {
+				position: absolute;
+				content: '';
+				top: 50%;
+				left: 0;
+				transform: translateY(-50%);
+				width: 100%;
+				z-index: 1;
+				background: rgba(125, 125, 125, 0.57);
+				height: 0.3rem;
+			}
+
+			&.swiper-pagination-bullet-active:before {
+				position: absolute;
+				content: '';
+				top: 50%;
+				transform: translateY(-50%);
+				left: 0;
+				height: 0.3rem;
+				width: 50%;
+				background: rgba(125, 125, 125, 0.87);
+				z-index: 2;
+			}
+		}
+	}
+}
+// === and reviews slider ========================================================================
+

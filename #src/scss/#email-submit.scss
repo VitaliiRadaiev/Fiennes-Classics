@@ -1,0 +1,138 @@
+.email-submit {
+	background-color: #5a92ab;
+	&__body {
+		min-height: 21.5rem;
+		padding-top: 2rem;
+		padding-bottom: 2rem;
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+
+	&__column {
+		width: 50%;
+		display: flex;
+		justify-content: center;
+		padding: 0 1.5rem;
+
+		@media (max-width: 1023px) {
+			width: 100%;
+			padding: 0;
+		}
+	}
+
+	&__text {
+		color: #ffffff;
+		font-size: 2rem;
+		font-weight: 500;
+		line-height: 2.2rem;
+
+		@media (max-width: 1023px) {
+			text-align: center;
+		}
+	}
+
+	&__form {
+		width: 100%;
+		max-width: 64rem;
+		display: flex;
+		align-items: center;
+		margin-right: 7rem;
+
+		@media (max-width: 1440px) {
+			margin-right: 4rem;
+		}
+
+		@media (max-width: 1023px) {
+			margin-right: 0rem;
+		}
+	}
+
+	&__form-item {
+		flex: 1 1 auto;
+
+		&:last-child {
+			flex: 0 0 auto;
+		}
+	}
+	&__form-input {
+		width: 100%;
+		background: #fff;
+		min-height: 5.4rem;
+		padding: 1.5rem 3.3rem 1rem;
+		outline: none;
+
+		&::placeholder {
+			color: #000000;
+			font-size: 1.8rem;
+			font-weight: 700;
+			letter-spacing: 0.257rem;
+			text-transform: uppercase;
+		}
+
+		&:focus {
+			color: #000000;
+			font-size: 1.6rem;
+			font-weight: 700;
+			letter-spacing: 0.2rem;
+			text-transform: uppercase;
+		}
+
+		@media (max-width: $md3+px) {
+			padding: 1.5rem 1.5rem 1rem;
+			&::placeholder {
+				font-size: 1.4rem;
+				letter-spacing: 0.157rem;
+			}
+
+			&:focus {
+				font-size: 1.4rem;
+				letter-spacing: 0.1rem;
+			}
+		}
+	}
+
+	&__form-submit {
+		min-width: 15rem;
+		min-height: 5.4rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: #fff;
+		position: relative;
+		transition: all .2s ease;
+		color: #5a92ab;
+		font-size: 1.8rem;
+		font-weight: 700;
+		letter-spacing: 0.257rem;
+		text-transform: uppercase;
+		padding: 1.5rem 1rem 1rem;
+
+		@media (min-width: 992px) {
+			&:hover {
+				background: #e1e1e1;
+			}
+		}
+
+		&:active {
+			background: #e1e1e1;
+		}
+
+		&:before {
+			position: absolute;
+			content: '';
+			top: 50%;
+			left: 0;
+			width: 2px;
+			height: 80%;
+			background: #ccc;
+			transform: translateY(-50%);
+		}
+
+		@media (max-width: $md3+px) {
+			min-width: 11rem;
+			font-size: 1.4rem;
+			letter-spacing: 0.157rem;
+		}
+	}
+}
