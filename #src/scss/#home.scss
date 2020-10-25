@@ -229,6 +229,7 @@
 					width: 50%;
 					background: #fff;
 					z-index: 2;
+					animation: dotAnim .2s ease;
 				}
 			}
 		}
@@ -372,7 +373,10 @@
 				width: 50%;
 				background: #fff;
 				z-index: 2;
+				transition: all .2s ease;
+				animation: dotAnim .2s ease;
 			}
+
 		}
 	}
 }
@@ -422,10 +426,10 @@
 
 // == slider-2 ======================================================================
 .slider-2 {
-	margin-left: 10vw;
+	//margin-left: 10vw;
 
 	@media (max-width: $md3+px) {
-		margin-left: 5vw;
+		//margin-left: 5vw;
 	}
 
 	& .swiper-container {
@@ -433,16 +437,25 @@
 	}
 
 	& .swiper-slide {
-		width: 87%;
+		width: 75%;
+		cursor: grab;
+		@media (max-width: 1024px) {
+			width: 85%;
+		}
 	}
-	& .swiper-pagination {
+
+	& .scrollbar-wrap {
 		position: static;
 		display: flex;
 		justify-content: center;
 		align-items: flex-end;
 		height: 9rem;
-		width: 87%;
-		margin-bottom: 0.5rem;
+		width: 75%;
+		margin: 0 auto 0.5rem;
+
+		@media (max-width: 1024px) {
+			width: 85%;
+		}
 
 		@media (max-width: $md3+px) {
 			height: 6rem;
@@ -452,28 +465,21 @@
 			height: 4rem;
 		}
 
-		& > span {
+
+		& .swiper-scrollbar {
+			position: static;
 			border-radius: 0;
 			flex: 1 1 auto;
 			margin: 0 !important;
 			height: 2px;
+			background: #5a92ab59;
+		}
+
+		& .swiper-scrollbar-drag {
+			height: 0.7rem;
 			background: #5a92ab;
-			position: relative;
-
-			&.swiper-pagination-bullet-active {
-				background: transparent;
-
-				&:before {
-					position: absolute;
-					content: '';
-					top: 50%;
-					left: 0;
-					width: 100%;
-					height: 0.7rem;
-					background: #5a92ab;
-					transform: translateY(-50%);
-				}
-			}
+			border-radius: 0;
+			top: -0.25rem;
 		}
 	}
 

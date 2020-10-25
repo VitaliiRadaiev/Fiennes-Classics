@@ -71,6 +71,7 @@ let _slideToggle = (target, duration = 500) => {
 $(document).ready(function() {
 	@@include('popup.js');
 	@@include('burger.js');
+	@@include('scroll-anim.js');
 
 // === Проверка, поддержка браузером формата webp ==================================================================
 

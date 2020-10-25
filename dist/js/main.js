@@ -208,6 +208,43 @@ document.addEventListener('keydown', function(e) {
 	}
 	$('.burger').click((e) => burgerBtnAnimation(e));
 // === Burger Handler =====================================================================	;
+	
+const animItems = document.querySelectorAll('._anim-items');
+
+if (animItems.length > 0) {
+	window.addEventListener('scroll', animOnScroll);
+	function animOnScroll() {
+		for (let index = 0; index < animItems.length; index++) {
+			const animItem = animItems[index];
+			const animItemHeight = animItem.offsetHeight;
+			const animItemOffset = offset(animItem).top;
+			const animStart = 4;
+
+			let animItemPoint = window.innerHeight - animItemHeight / animStart;
+			if (animItemHeight > window.innerHeight) {
+				animItemPoint = window.innerHeight - window.innerHeight / animStart;
+			}
+
+			if ((pageYOffset > animItemOffset - animItemPoint) && pageYOffset < (animItemOffset + animItemHeight)) {
+				animItem.classList.add('_active');
+			} else {
+				if (!animItem.classList.contains('_anim-no-hide')) {
+					animItem.classList.remove('_active');
+				}
+			}
+		}
+	}
+	function offset(el) {
+		const rect = el.getBoundingClientRect(),
+			scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+			scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+		return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
+	}
+
+	setTimeout(() => {
+		animOnScroll();
+	}, 300);
+};
 
 // === Проверка, поддержка браузером формата webp ==================================================================
 
@@ -350,6 +387,7 @@ cardJournalHandler();;
 			var mySwiper = new Swiper(item.querySelector('.swiper-container'), {
 			slidesPerView:1,
 			loop: true,
+			effect: 'fade',
 			speed: 600,
 			spaceBetween: 15,
 			pagination: {
@@ -383,24 +421,23 @@ cardJournalHandler();;
 
 		var mySwiper = new Swiper(slider, {
 		slidesPerView:'auto',
-		loop: true,
 		speed: 600,
 		spaceBetween: 65,
-		pagination: {
-		    el: slider.querySelector('.swiper-pagination'),
-		    clickable: true,
-		  },
+		centeredSlides: true,
+		scrollbar: {
+		  el: slider.querySelector('.swiper-scrollbar'),
+		},
 		 breakpoints: {
 		 	320: {
-		 		spaceBetween: 20
+		 		spaceBetween: 15
 		 	},
-		   480: {
-		     spaceBetween: 40
-		   },
 		   768: {
-		     spaceBetween: 65
-		   }
-		 } 
+		     spaceBetween: 30
+		   },
+		   1024: {
+		   	spaceBetween: 65
+		   },
+		 }   
 		})
 	}
 }

@@ -98,6 +98,15 @@ a {
 	}
 }
 
+@keyframes dotAnim {
+	from {
+		width: 0%;
+	}
+	to{
+		width: 50%;
+	}
+}
+
 
 // //<ОБОЛОЧКА>===========================================================================================================
 // .wrapper {
@@ -421,10 +430,22 @@ a {
 		height: 0.7rem;
 		background: #5a92ab;
 		margin-bottom: 3rem;
+
+		transition: all .8s ease;
+		transform: translate(0, 120%);
+		opacity: 0;
+		&._active {
+			transition: all .8s ease 0.4s;
+			transform: translate(0, 0);
+			opacity: 1;
+		}
 	}
 
 	&__suptitle {
 		margin-bottom: 1rem;
+		transition: all .8s ease;
+		transform: translate(0, 120%);
+		opacity: 0;
 
 		@media (max-width: $md3+px) {
 			margin-bottom: 0.8rem;
@@ -433,10 +454,25 @@ a {
 		@media (max-width: $md4+px) {
 			margin-bottom: 0.5rem;
 		}
+
+		&._active {
+			transition: all .8s ease 0.4s;
+			transform: translate(0, 0);
+			opacity: 1;
+		}
 	}
 	&__title {
 		margin-bottom: 4rem;
 		max-width: 90rem;
+
+		transition: all .8s ease;
+		transform: translate(0, 120%);
+		opacity: 0;
+		&._active {
+			transition: all .8s ease 0.4s;
+			transform: translate(0, 0);
+			opacity: 1;
+		}
 
 		@media (max-width: $md3+px) {
 			margin-bottom: 3rem;
@@ -455,6 +491,15 @@ a {
 		font-weight: 300;
 		line-height: 2.5rem;
 		margin-bottom: 4.8rem;
+		transition: all .8s ease;
+		
+		transform: translate(0, 120%);
+		opacity: 0;
+		&._active {
+			transition: all .8s ease 0.4s;
+			transform: translate(0, 0);
+			opacity: 1;
+		}
 
 		& p {
 
@@ -478,7 +523,16 @@ a {
 		}
 	}
 
-	&__btn-wrap {}
+	&__btn-wrap {
+		transition: all .8s ease;
+		transform: translate(0, 120%);
+		opacity: 0;
+		&._active {
+			transition: all .8s ease 0.4s;
+			transform: translate(0, 0);
+			opacity: 1;
+		}
+	}
 }
 // === and text-block ========================================================================
 
@@ -686,6 +740,17 @@ a {
 		@media (max-width: $md3+px) {
 			padding: 2rem 2rem;
 		}
+	}
+
+	&__text {
+		transition: all .8s ease;
+		transform: translate(0, 120%);
+		opacity: 0;
+		&._active {
+			transition: all .8s ease 0.4s;
+			transform: translate(0, 0);
+			opacity: 1;
+		}
 
 		& > p {
 			color: #231f20;
@@ -705,10 +770,19 @@ a {
 			}
 		}
 	}
+
 	&__suptitle {
 		margin-bottom: 1.5rem;
 		max-width: 58.5rem;
 		font-weight: 700;
+		transition: all .8s ease;
+		transform: translate(0, 120%);
+		opacity: 0;
+		&._active {
+			transition: all .8s ease 0.4s;
+			transform: translate(0, 0);
+			opacity: 1;
+		}
 
 		@media (max-width: $md3+px) {
 			margin-bottom: 1rem;
@@ -718,6 +792,14 @@ a {
 		max-width: 58.5rem;
 		flex: 1 1 auto;
 		margin-bottom: 2rem;
+		transition: all .8s ease;
+		transform: translate(0, 120%);
+		opacity: 0;
+		&._active {
+			transition: all .8s ease 0.4s;
+			transform: translate(0, 0);
+			opacity: 1;
+		}
 
 		@media (max-width: $md3+px) {
 			margin-bottom: 1rem;
@@ -729,6 +811,14 @@ a {
 	}
 	&__btn-wrap {
 		margin-top: 5.3rem;
+		transition: all .8s ease;
+		transform: translate(0, 120%);
+		opacity: 0;
+		&._active {
+			transition: all .8s ease 0.4s;
+			transform: translate(0, 0);
+			opacity: 1;
+		}
 
 		@media (max-width: $md3+px) {
 			 margin-top: 3.3rem;
@@ -737,6 +827,14 @@ a {
 
 	& .line {
 		margin-bottom: 2.5rem;
+		transition: all .8s ease;
+		transform: translate(0, 120%);
+		opacity: 0;
+		&._active {
+			transition: all .8s ease 0.4s;
+			transform: translate(0, 0);
+			opacity: 1;
+		}
 	}
 }
 
@@ -1121,7 +1219,9 @@ a {
 				width: 50%;
 				background: rgba(125, 125, 125, 0.87);
 				z-index: 2;
+				animation: dotAnim .6s ease;
 			}
+
 		}
 	}
 }
