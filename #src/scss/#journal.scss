@@ -95,7 +95,7 @@
 				}
 
 				&:first-child {
-					min-width: 2rem;
+					flex: 0 0 2rem;
 				}
 				& > svg {
 					height: auto;
@@ -110,7 +110,7 @@
 					}
 
 					&:first-child {
-						min-width: 4rem;
+						flex: 0 0 4rem;
 					}
 					& > svg {
 						height: auto;

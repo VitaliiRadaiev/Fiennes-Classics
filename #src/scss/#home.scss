@@ -331,15 +331,41 @@
 	&__img {
 		height: 80vh;
 		min-height: 48rem;
-		background-color: #b9b9b9;
+		background-color: #fff;
 
 		@media (max-width: $md3+px) {
 			height: 60vh;
 		}
 	}
 
+	& .swiper-slide {
+		cursor: grab;
+		& img {
+			opacity: 0;
+			transition: all .6s ease;
+		}
+		&.swiper-slide-active {
+			& img {
+				opacity: 1;
+			}
+		}
+	}
+
 	& .swiper-pagination  {
-		bottom: 1.7rem;
+		top: auto;
+		bottom: 1.7em;
+		width: 40%;
+		left: 50%;
+		transform: translateX(-50%);
+
+		& .swiper-pagination-progressbar {
+			background: rgba(255, 255, 255, 0.57);
+		}
+
+		& .swiper-pagination-progressbar-fill {
+			background: #fff;
+		}
+/*		bottom: 1.7rem;
 		& > span {
 			position: relative;
 			height: 0.3rem;
@@ -377,7 +403,7 @@
 				animation: dotAnim .2s ease;
 			}
 
-		}
+		}*/
 	}
 }
 
