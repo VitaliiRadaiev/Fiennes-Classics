@@ -288,6 +288,16 @@
 			margin: 3.5rem 0 3.4rem;
 		}
 	}
+
+	&__tabs-text-wrap {
+		& .item {
+			margin-bottom: 4.5rem;
+
+			@media (max-width: $md3+px) {
+				margin-bottom: 2.5rem;
+			}
+		}
+	}
 }
 
 
