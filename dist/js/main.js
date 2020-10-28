@@ -490,11 +490,12 @@ cardJournalHandler();;
 				let column = document.createElement('div');
 				column.className = 'column';
 
-				let innerArr = arr.slice(0, num + 1);
+				let innerArr = arr.slice(0, num);
 
-				if(arr.length > num) {
-					arr = arr.slice(num);
-				}
+				arr = arr.filter((item, index) => {
+					if(item != innerArr[index]) return item;
+				})
+
 
 				if(innerArr.length) {
 					innerArr.forEach(item => {
