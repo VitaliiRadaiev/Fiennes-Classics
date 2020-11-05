@@ -1,5 +1,7 @@
 .marques {
-	&__hero {}
+	&__hero {
+
+	}
 
 	&__subhero {
 		margin: 15.5rem 0 15rem;
@@ -12,6 +14,33 @@
 			margin: 5.5rem 0 5rem;
 		}
 	}
+
+	&__text-block {
+		margin: 15.3rem 0 15rem;
+
+		@media (max-width: $md3+px) {
+			margin: 10rem 0 10rem;
+		}
+
+		@media (max-width: $md4+px) {
+			margin: 5rem 0 5rem;
+		}
+
+		& .text-block__title {
+			margin-bottom: 7rem;
+
+			@media (max-width: $md3+px) {
+				margin-bottom: 4rem;
+			}
+
+			@media (max-width: $md2+px) {
+				margin-bottom: 3rem;
+			}
+		}
+
+	}
+
+	&__product {}
 
 	&__slider {
 
@@ -66,7 +95,53 @@
 
 	}
 
-	&__bottom {}
+	&__services {
+		& .services-block {
+			&:nth-child(2n) {
+				& .services-block__body {
+					flex-direction: row-reverse;
+				}
+
+				& .text-block {
+					& .text-block__body {
+						align-items: flex-end;
+						text-align: right;
+
+						@media (max-width: 1023px) {
+							align-items: center;
+							text-align: center;
+						}
+
+						& .text-block__suptitle {
+							margin-bottom: 1rem;
+						}
+
+						& .text-block__title {
+							max-width: 67rem;
+							letter-spacing: 0.7rem;
+							line-height: 5rem;
+							margin-bottom: 4rem;
+
+
+							@media (max-width: $md3+px) {
+								line-height: 4rem;
+								margin-bottom: 3rem;
+								letter-spacing: 0.5rem;
+							}
+
+							@media (max-width: $md3+px) {
+								line-height: 3rem;
+							}
+						}
+
+						& .text-block__text {
+							max-width: 60rem;
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
 
@@ -444,3 +519,156 @@
 		}
 	}
 }
+
+
+
+
+
+//=== product-blodk ================================================================
+.product-block {
+	background-color: #f9f9f9;
+	background-image: linear-gradient(180deg, #f9f9f9 0%, #ffffff 100%);
+	padding-top: 17.6rem;
+
+	@media (max-width: 1023px) {
+		margin: 14rem 0 8rem;
+	}
+
+	@media (max-width: $md3+px) {
+		margin: 12rem 0 8rem;
+		padding-top: 12rem;
+	}
+
+	@media (max-width: $md4+px) {
+		margin: 8rem 0 7rem;
+		padding-top: 9rem;
+	}
+
+	&__head {
+		margin-bottom: 4.4rem;
+
+		@media (max-width: $md3+px) {
+			margin-bottom: 2.4rem;
+		}
+		@media (max-width: $md4+px) {
+			margin-bottom: 0.4rem;
+		}
+
+		& .text-block__title {
+			max-width: 67.3rem;
+		}
+	}
+
+	&__body {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	&__item {
+		flex: 0 1 25%;
+		margin-bottom: 9rem;
+		text-align: center;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 0 3rem;
+
+		@media (max-width: $md3+px) {
+			flex: 0 1 50%;
+		}
+
+		@media (max-width: $md4+px) {
+			padding: 0 1rem;
+		}
+
+		& img {
+			max-width: 100%;
+		}
+	}
+}
+
+//=== and product-blodk ================================================================
+
+
+
+
+
+
+
+
+//=== services-block ================================================================
+.services-block {
+	margin: 26rem 0;
+
+	@media (max-width: 1023px) {
+		margin: 12rem 0;
+	}
+
+	@media (max-width: $md3+px) {
+		margin: 7rem 0;
+	}
+
+	&__body {
+		width: 100%;
+		max-width: 138.8rem;
+		margin: 6.4rem auto 0; 
+		display: flex;
+
+		@media (max-width: 1023px) {
+			display: block;
+		}
+	}
+
+	&__column {
+		&_1 {
+			flex: 0 1 50%;
+			padding: 7rem 3rem 7rem 0;
+
+			@media (max-width: $md2+px) {
+				flex: 0 0 100%;
+			}
+
+			@media (max-width: $md3+px) {
+				flex: 0 0 100%;
+				padding: 0rem 1.5rem 7rem 0;
+			}
+		}
+		&_2 {
+			flex: 0 1 50%;
+
+			@media (max-width: $md2+px) {
+				flex: 0 0 100%;
+			}
+		}
+	}
+	&__text-wrap {
+		max-width: 63rem;
+
+
+
+		@media (max-width: 1023px) {
+			margin: 0 auto;
+		}
+
+		& .text-block__body {
+
+			@media (max-width: 1023px) {
+				text-align: center;
+				align-items: center;
+			}
+
+			@media (max-width: $md3+px) {
+				margin-top: 4rem;
+			}
+		}
+	}
+	&__img {
+		height: 100%;
+
+		@media (max-width: 1023px) {
+			height: 0;
+			padding-bottom: 55%;
+		}
+	}
+}
+
+//=== and services-block================================================================
