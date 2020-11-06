@@ -119,6 +119,7 @@ $('img.img-svg').each(function(){
 // === COMMON ==================================================================
 @@include('#card-journal.js');
 @@include('#reviews-slider.js');
+@@include('#video.js');
 // === COMMON ==================================================================
 
 
