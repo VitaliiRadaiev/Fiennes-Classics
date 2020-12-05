@@ -4,6 +4,14 @@
 
 		& .swiper-container {
 			border-bottom: 1rem solid $mainColor;
+			& .swiper-pagination {
+				& .swiper-pagination-bullet-active {
+					& > .progress {
+						 animation: dash 8.1s linear forwards;
+					}
+				}
+				
+			}
 		}
 		@media (max-width: $md3+px) {
 			padding: 0 1.5rem;
@@ -49,10 +57,15 @@
 	}
 
 	&__book-restoration {
+		background: #edededcc;
+		margin: 12rem 0 15rem; 
 
+		@media (max-width: $md3+px) {
+			margin: 7rem 0 9rem;  
+		}
 	}
 	&__book-restoration-body {
-		min-height: 52rem;
+		min-height: 24rem;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
@@ -62,10 +75,6 @@
 			flex-direction: column;
 			justify-content: center;
 			text-align: center;
-		}
-
-		@media (max-width: $md3+px) {
-			min-height: 36rem;
 		}
 
 	}
@@ -102,6 +111,7 @@
 	&__top {
 		display: flex;
 		flex-direction: column;
+		margin-bottom: 3.6rem;
 
 		& .previous-restoration__text {
 			margin-left: auto;
@@ -118,12 +128,27 @@
 	}
 
 	&__text {
-		max-width: 75rem;
+		max-width: 75rem; 
 		padding: 3rem 2rem;
 		font-family: $seconFontFamily;
 		font-size: 1.5rem;
 		letter-spacing: 0.1rem;
 		line-height: 1.8rem;
+
+		& h3 {
+			display: inline-block;
+			color: #231f20;
+			font-family: $mainFontFamily;
+			font-size: 1.3rem;
+			font-weight: 700;
+			letter-spacing: 0.142em;
+			line-height: 1.8rem;
+
+			@media (max-width: $md4+px) {
+				font-size: 1.2rem;
+				letter-spacing: 0.142em;
+			}
+		}
 	}
 
 	&__bottom {

@@ -244,7 +244,7 @@ if (animItems.length > 0) {
 	setTimeout(() => {
 		animOnScroll();
 	}, 300);
-};
+}; 
 
 // === Проверка, поддержка браузером формата webp ==================================================================
 
@@ -308,18 +308,48 @@ cardJournalHandler();;
 	let slider = document.querySelectorAll('.reviews-slider');
 	if(slider.length>0) {
 		slider.forEach(item => {
+			let paginationMode = null;
 			var mySwiper = new Swiper(item.querySelector('.swiper-container'), {
 			slidesPerView:1,
 			autoHeight: true,
-			loop: true,
+			//loop: true,
 			speed: 600,
 			spaceBetween: 15,
+			autoplay: {
+			  delay: 8000,
+			   disableOnInteraction: false,
+			},
+			// scrollbar: {
+			//   el: item.querySelector('.swiper-scrollbar'),
+			// },
 			pagination: {
 			    el: item.querySelector('.swiper-pagination'),
-			    clickable: true,
+			     clickable: true,
+			     renderBullet: function(index, className) {
+			     	return '<div class="' + className + '"> <span class="progress"></span> </div>'
+			     }
 			  },
-			})
+			 on: {
+
+			 	slideChangeTransitionStart: function(current) {
+			 		let pagination = item.querySelector('.swiper-pagination');
+			 		let lenght = pagination.children.length;
+			 		
+			 		for(let i = 0; i < lenght; i++) {
+			 			if(i == current.activeIndex) break;
+			 			pagination.children[i].classList.add('isShow');
+			 		}
+
+			 		for(let i = current.activeIndex; i < lenght; i++) {
+			 			pagination.children[i].classList.remove('isShow');
+			 			pagination.children[i].firstElementChild.style.transform = 'scaleX(0)';
+			 		}
+			 	}
+			 },  
 		})
+
+		});
+
 	}
 }
 // == and  slider ==========================================================================
@@ -329,12 +359,10 @@ function cardVideoHandler() {
 		if(video.paused) {
 			video.play();
 			btn.firstElementChild.className = 'icon-pause2';
-			btn.firstElementChild.style.marginLeft = '0px';
 
 		} else {
 			video.pause();
 			btn.firstElementChild.className = 'icon-play3';
-			btn.firstElementChild.style.marginLeft = '0.4rem';
 		}
 	}
 
@@ -357,7 +385,6 @@ function cardVideoHandler() {
 				video.addEventListener('ended', () => {
 					video.pause();
 					btn.firstElementChild.className = 'icon-play3';
-					btn.firstElementChild.style.marginLeft = '0.4rem';
 				});
 				video.addEventListener('mousemove', (e) => { 
 					if(!video.paused) {
@@ -411,29 +438,79 @@ cardVideoHandler();;
 
 
 // === HOME ==================================================================
+// // == hero slider ==========================================================================
+// {
+// 	let heroSlider = document.querySelector('.hero-slider .swiper-container');
+// 	if(heroSlider) {
+
+// 		var mySwiper = new Swiper(heroSlider, {
+// 		slidesPerView:1,
+// 		//loop: true,
+// 		effect: 'fade',
+// 		autoplay: {
+// 		  delay: 4000,
+// 		},
+// 		speed: 1000,
+
+// 		// pagination: {
+// 		//     el: heroSlider.querySelector('.swiper-pagination'),
+// 		//      clickable: true,
+// 		//      type: 'progressbar',
+// 		//   },
+// 		scrollbar: {
+// 		  el: heroSlider.querySelector('.swiper-scrollbar'),
+// 		},
+// 		})
+// 	}
+// }
+// // == and hero slider ==========================================================================
+
 // == hero slider ==========================================================================
 {
 	let heroSlider = document.querySelector('.hero-slider .swiper-container');
 	if(heroSlider) {
 
-		var mySwiper = new Swiper(heroSlider, {
+		let mySwiper = new Swiper(heroSlider, {
 		slidesPerView:1,
-		loop: true,
+		//loop: true,
 		effect: 'fade',
 		autoplay: {
-		  delay: 4000,
+		  delay: 8000,
+		  disableOnInteraction: false,
 		},
-		speed: 800,
+		speed: 1000,
 
 		pagination: {
 		    el: heroSlider.querySelector('.swiper-pagination'),
 		     clickable: true,
+		     renderBullet: function(index, className) {
+		     	return '<div class="' + className + '"> <span class="progress"></span> </div>'
+		     }
 		  },
+		 on: {
+
+		 	slideChangeTransitionStart: function(current) {
+		 		let pagination = heroSlider.querySelector('.swiper-pagination');
+		 		let lenght = pagination.children.length;
+		 		
+		 		for(let i = 0; i < lenght; i++) {
+		 			if(i == current.activeIndex) break;
+		 			pagination.children[i].classList.add('isShow');
+		 		}
+
+		 		for(let i = current.activeIndex; i < lenght; i++) {
+		 			pagination.children[i].classList.remove('isShow');
+		 			pagination.children[i].firstElementChild.style.transform = 'scaleX(0)';
+		 		}
+		 	}
+		 } 
+		// scrollbar: {
+		//   el: heroSlider.querySelector('.swiper-scrollbar'),
+		// },
 		})
 	}
 }
 // == and hero slider ==========================================================================
-
 
 
 // ==  slider ==========================================================================
@@ -444,17 +521,40 @@ cardVideoHandler();;
 			var mySwiper = new Swiper(item.querySelector('.swiper-container'), {
 			slidesPerView:1,
 			effect: 'fade',
-			loop: true,
+			//loop: true,
 			speed: 600,
 			autoplay: {
-			  delay: 3000,
+			  delay: document.querySelector('.res-single .res-single__hero.slider') ? 8000 : 4000,
+			   disableOnInteraction: false,
 			},
 			spaceBetween: 15,
 			pagination: {
 			    el: item.querySelector('.swiper-pagination'),
-			   // clickable: true,
-			    type: 'progressbar',
+			     clickable: true,
+			     renderBullet: function(index, className) {
+			     	return '<div class="' + className + '"> <span class="progress"></span> </div>'
+			     }
 			  },
+			 on: {
+
+			 	slideChangeTransitionStart: function(current) {
+			 		let pagination = item.querySelector('.swiper-pagination');
+			 		let lenght = pagination.children.length;
+			 		
+			 		for(let i = 0; i < lenght; i++) {
+			 			if(i == current.activeIndex) break;
+			 			pagination.children[i].classList.add('isShow');
+			 		}
+
+			 		for(let i = current.activeIndex; i < lenght; i++) {
+			 			pagination.children[i].classList.remove('isShow');
+			 			pagination.children[i].firstElementChild.style.transform = 'scaleX(0)';
+			 		}
+			 	}
+			 }, 
+				// scrollbar: {
+				//   el: item.querySelector('.swiper-scrollbar'),
+				// },
 			})
 		})
 	}
@@ -462,32 +562,29 @@ cardVideoHandler();;
 // == and  slider ==========================================================================
 
 
-// == video block ==========================================================================
-{
-	let video = document.getElementById('player');
-	if(video) {
-		const player = new Plyr(video);
-
-		player.on('ready', event => {
-		  const instance = event.detail.plyr;
-		});
-	}
-}
-// == and  video block ==========================================================================
-
 // ==  slider-2 ==========================================================================
 {
 	let slider = document.querySelector('.slider-2 .swiper-container');
 	if(slider) {
-
-		var mySwiper = new Swiper(slider, {
+		//let childrenLength = slider.querySelector('.swiper-wrapper').children.length;
+	    var mySwiper = new Swiper(slider, {
 		slidesPerView:'auto',
 		speed: 600,
 		spaceBetween: 65,
 		centeredSlides: true,
+		//initialSlide: childrenLength - 1,
+		touchRatio: 1,
 		scrollbar: {
 		  el: slider.querySelector('.swiper-scrollbar'),
+		   draggable: true,
 		},
+		// on: {
+		// 	slideChange: () => {
+		// 		if(mySwiper) {
+		// 			console.dir(mySwiper);
+		// 		}
+		// 	}
+		// }, 
 		 breakpoints: {
 		 	320: {
 		 		spaceBetween: 15
@@ -498,9 +595,15 @@ cardVideoHandler();;
 		   1024: {
 		   	spaceBetween: 65
 		   },
-		 }   
+		 },  
 		})
+
+		// mySwiper.on('slideChange', function () {
+		//   console.log('slide changed');
+		// });
+
 	}
+
 }
 // == and  slider-2 ==========================================================================
 ;
@@ -535,6 +638,8 @@ cardVideoHandler();;
 
 		tabs.forEach(contetn => {
 			addColumns(contetn.querySelector('.info-block__tabs-text-wrap'));
+			distributeEl(contetn.querySelector('.info-block__tabs-text-wrap'))
+			contetn.style.display = 'none'
 		})
 
 
@@ -563,6 +668,49 @@ cardVideoHandler();;
 				block.append(column);
 			}
 
+		}
+
+		function distributeEl(block) {
+			let thamb = true;
+			let count = 0;
+			while (thamb) {
+
+				console.log('tick')
+				let column1 = block.children[0];
+				let column2 = block.children[1];
+				let column3 = block.children[2];
+
+				const findHeight = (column) => {
+					let count = 0;
+					for(let el of column.children) {
+						count += el.scrollHeight;
+					}
+					return count;
+				}
+
+				findHeight(column2)
+
+				let arrElHeight = [findHeight(column1), findHeight(column2), findHeight(column3)];
+				let maxHeight = Math.max(...arrElHeight);
+				let maxHeightIndex = arrElHeight.indexOf(maxHeight)
+
+				let minHeight = Math.min(...arrElHeight);
+				let minHeightIndex = arrElHeight.indexOf(minHeight)
+
+
+				if(maxHeight - minHeight > 200) {
+					let el = block.children[maxHeightIndex].lastElementChild;
+					block.children[minHeightIndex].append(el);
+				} else {
+					thamb = false;
+				}
+
+				count++;
+
+				if(count >= 10) {
+					thamb = false;
+				}
+			}
 		}
 	}
 }
@@ -727,7 +875,7 @@ function selects_update_all() {
 			select_item(select);
 		}
 	}
-};
+}; 
 // === // CONTACT ==================================================================
 
 });
@@ -742,15 +890,15 @@ function selects_update_all() {
 	if(isMap) {
 		var map;
 
-		let center = {
-			lat: 51.735542,
-			lng: -1.666285,
-		}
+		// let center = {
+		// 	lat: 51.735394,
+		// 	lng: -1.666271,
+		// }
 
-		let markerPosition = {
-			lat: 51.735542,
-			lng: -1.666285,
-		}
+		// let markerPosition = {
+		// 	lat: 51.735394,
+		// 	lng: -1.666271,
+		// }
 
 		// Функция initMap которая отрисует карту на странице
 		function initMap() {
@@ -759,10 +907,10 @@ function selects_update_all() {
 			map = new google.maps.Map(document.getElementById('map'), {
 				// При создании объекта карты необходимо указать его свойства
 				// center - определяем точку на которой карта будет центрироваться
-				center: {lat: center.lat, lng: center.lng},
+				center: {lat: +global.lat, lng: +global.lng},
 				// zoom - определяет масштаб. 0 - видно всю платнеу. 18 - видно дома и улицы города.
 
-				zoom: 14,
+				zoom: 16,
 
 				// Добавляем свои стили для отображения карты
 				//styles: 
@@ -772,7 +920,7 @@ function selects_update_all() {
 			var marker = new google.maps.Marker({
 
 				// Определяем позицию маркера
-			    position: {lat: markerPosition.lat, lng: markerPosition.lng},
+			    position: {lat: +global.lat, lng: +global.lng},
 
 			    // Указываем на какой карте он должен появится. (На странице ведь может быть больше одной карты)
 			    map: map,

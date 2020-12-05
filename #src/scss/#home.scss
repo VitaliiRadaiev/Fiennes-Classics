@@ -4,7 +4,7 @@
 	}
 
 	&__text-block {
-		margin: 15.3rem 0 15rem;
+		margin: 15.3rem 0 15.3rem;
 
 		@media (max-width: $md3+px) {
 			margin: 10rem 0 10rem;
@@ -28,7 +28,7 @@
 	}
 
 	&__text-block-2 {
-		margin: 13.3rem 0 13.3rem;
+		margin: 13.3rem 0 20.3rem;
 
 		@media (max-width: $md3+px) {
 			margin: 12rem 0 12rem;
@@ -63,7 +63,7 @@
 	}
 
 	&__text-block-3 {
-		margin: 13.3rem 0 13.3rem;
+		margin: 13.3rem 0 20.3rem;
 
 		@media (max-width: $md3+px) {
 			margin: 12rem 0 12rem;
@@ -94,12 +94,12 @@
 	}
 	&__founder-text {
 		color: #231f20;
-		font-size: 2.6rem;
+		font-size: 2.2rem;
 		font-weight: 500;
-		letter-spacing: 0.249rem;
+		letter-spacing: 0.095em;
 		max-width: 113.2rem;
 		margin: 0 auto;
-		line-height: 3.6rem;
+		line-height: 3.2rem;
 
 		& > p {
 			&:not(:last-child) {
@@ -194,43 +194,111 @@
 			}
 		}
 
+/*		& .scrollbar-wrap {
+			position: absolute;
+			bottom: 2.7rem;
+			z-index: 5;
+			left: 50%;
+			transform: translateX(-50%);
+			display: flex;
+			justify-content: center;
+			align-items: flex-end;
+			height: 9rem;
+			width: 40%;
+			margin: 0 auto 0.5rem;
+
+			@media (max-width: 1024px) {
+				width: 65%;
+			}
+
+			@media (max-width: $md3+px) {
+				height: 6rem;
+			}
+
+			@media (max-width: $md3+px) {
+				height: 4rem;
+			}
+
+
+			& .swiper-scrollbar {
+				position: static;
+				border-radius: 0;
+				flex: 1 1 auto;
+				margin: 0 !important;
+				height: 4px;
+				background: rgba(#000, 0.25);
+			}
+
+			& .swiper-scrollbar-drag {
+				height: 4px;
+				background: #fff;
+			}
+		}*/
+
 		& .swiper-pagination  {
-			bottom: 1.7rem;
-			& > span {
+			bottom: 2.5rem;
+			top: auto;
+			width: 60%;
+			left: 50%;
+			transform: translateX(-50%);
+
+			& > .swiper-pagination-bullet {
 				position: relative;
-				height: 0.3rem;
-				width: 5.5%;
+				height: 0.4rem;
+				width: 17.5%;
 				z-index: 5;
 				opacity: 1;
 				border-radius: 0;
-				padding: 2.5rem 0;
+				//padding: 2.5rem 0;
 				background: transparent;
 				margin: 0px 6px !important;
+				background: rgba(0, 0, 0, 0.3);
+				border-radius: 5px;
 
-				&:after {
-					position: absolute;
-					content: '';
-					top: 50%;
-					left: 0;
-					transform: translateY(-50%);
-					width: 100%;
-					z-index: 1;
-					background: rgba(255, 255, 255, 0.57);
-					height: 0.3rem;
+				&.isShow {
+					& > .progress {
+						transform: scaleX(1) !important;
+					}
 				}
 
-				&.swiper-pagination-bullet-active:before {
+				& > .progress {
 					position: absolute;
-					content: '';
-					top: 50%;
-					transform: translateY(-50%);
+					top: 0;
 					left: 0;
-					height: 0.3rem;
-					width: 50%;
+					right: 0;
+					bottom: 0;
+					//height: 0.4rem;
+					//width: 0%;
 					background: #fff;
 					z-index: 2;
-					animation: dotAnim .2s ease;
+					border-radius: 5px;
+					transform: scaleX(0);
+					transform-origin: left;
+					
 				}
+
+				@keyframes dash {
+					from {
+						transform: scaleX(0);
+					}
+					to {
+						transform: scaleX(1);
+					}
+				}
+
+				&.swiper-pagination-bullet-active {
+					& > .progress {
+						 animation: dash 8.1s linear forwards;
+					}
+				}
+			}
+
+			& .swiper-pagination-progressbar {
+				background: rgba(255, 255, 255, 0.57);
+			}
+
+			& .swiper-pagination-progressbar-fill {
+				background: #fff;
 			}
 		}
 	}
@@ -261,12 +329,12 @@
 	}
 	&__suptitle {
 		color: #ffffff;
-		font-size: 1.5rem;
+		font-size: 1.3rem;
 		font-weight: 700;
-		letter-spacing: 0.214rem;
-		line-height: 1.8rem;
+		letter-spacing: 0.142em;
+		line-height: 1.6rem;
 		text-transform: uppercase;
-		margin-bottom: 2rem;
+		margin-bottom: 1.8rem;
 
 		@media (max-width: $md3+px) {
 			margin-bottom: 1.5rem;
@@ -278,13 +346,13 @@
 	}
 
 	&__title {
-		font-size: 5.8rem;
+		font-size: 5.2rem;
 		font-weight: 700;
-		letter-spacing: 0.845rem;
-		line-height: 6.5rem;
+		letter-spacing: 0.145em;
+		line-height: 5.5rem;
 		text-transform: uppercase;
-		margin-bottom: 8rem;
-		margin-top: 2rem;
+		margin-bottom: 7rem;
+		margin-top: 1.8rem;
 		max-width: 86rem;
 		margin-left: auto;
 		margin-right: auto;
@@ -343,7 +411,7 @@
 
 	& .swiper-slide {
 		cursor: grab;
-		& img {
+/*		& img {
 			opacity: 0;
 			transition: all .6s ease;
 		}
@@ -351,15 +419,107 @@
 			& img {
 				opacity: 1;
 			}
-		}
+		}*/
 	}
 
-	& .swiper-pagination  {
-		top: auto;
-		bottom: 1.7em;
-		width: 40%;
+/*	& .scrollbar-wrap {
+		position: absolute;
+		bottom: 2.7rem;
+		z-index: 5;
 		left: 50%;
 		transform: translateX(-50%);
+		display: flex;
+		justify-content: center;
+		align-items: flex-end;
+		height: 9rem;
+		width: 40%;
+		margin: 0 auto 0.5rem;
+
+		@media (max-width: 1024px) {
+			width: 65%;
+		}
+
+		@media (max-width: $md3+px) {
+			height: 6rem;
+		}
+
+		@media (max-width: $md3+px) {
+			height: 4rem;
+		}
+
+
+		& .swiper-scrollbar {
+			position: static;
+			border-radius: 0;
+			flex: 1 1 auto;
+			margin: 0 !important;
+			height: 4px;
+			background: rgba(#000, 0.25);
+		}
+
+		& .swiper-scrollbar-drag {
+			height: 4px;
+			background: #fff;
+		}
+	}*/
+
+	& .swiper-pagination  {
+		bottom: 2.5rem;
+		top: auto;
+		width: 60%;
+		left: 50%;
+		transform: translateX(-50%);
+
+		& > .swiper-pagination-bullet {
+			position: relative;
+			height: 0.4rem;
+			width: 17.5%;
+			z-index: 5;
+			opacity: 1;
+			border-radius: 0;
+			//padding: 2.5rem 0;
+			background: transparent;
+			margin: 0px 6px !important;
+			background: rgba(0, 0, 0, 0.3);
+			border-radius: 5px;
+
+			&.isShow {
+				& > .progress {
+					transform: scaleX(1) !important;
+				}
+			}
+
+			& > .progress {
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				//height: 0.4rem;
+				//width: 0%;
+				background: #fff;
+				z-index: 2;
+				border-radius: 5px;
+				transform: scaleX(0);
+				transform-origin: left;
+				
+			}
+
+			@keyframes dash {
+				from {
+					transform: scaleX(0);
+				}
+				to {
+					transform: scaleX(1);
+				}
+			}
+
+			&.swiper-pagination-bullet-active {
+				& > .progress {
+					 animation: dash 4.1s linear forwards;
+				}
+			}
+		}
 
 		& .swiper-pagination-progressbar {
 			background: rgba(255, 255, 255, 0.57);
@@ -368,7 +528,6 @@
 		& .swiper-pagination-progressbar-fill {
 			background: #fff;
 		}
-
 	}
 }
 
@@ -419,10 +578,22 @@
 		z-index: 2;
 		cursor: pointer;
 
-		& .icon-play3 {
-			margin-left: 0.4rem;
-		}
 
+
+		& .icon-play3:after {
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			content: 'WATCH OUR BRAND FILM';
+			color: #ffffff;
+			font-family: $mainFontFamily;
+			font-size: 15px;
+			font-weight: 700;
+			letter-spacing: 2.14px;
+			text-transform: uppercase;
+			transform: translate(-50%, 10%);
+			white-space: nowrap;
+		}
 	}
 
 }
@@ -486,6 +657,7 @@
 			background: #5a92ab;
 			border-radius: 0;
 			top: -0.25rem;
+					cursor: pointer;
 		}
 	}
 
@@ -511,6 +683,16 @@
 		line-height: 2.3rem;
 		letter-spacing: 0.3rem;
 		margin: 0 auto;
+
+		& > h3 {
+			color: #231f20;
+			font-family: $mainFontFamily;
+			font-size: 1.3rem;
+			font-weight: 700;
+			letter-spacing: 0.142em;
+			line-height: 1.8rem;
+			display: inline;
+		}
 	}
 
 }

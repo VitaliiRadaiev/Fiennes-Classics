@@ -5,7 +5,7 @@
 		display: flex;
 		background: #fff;
 		align-items: center;
-		min-height: 16.9rem;
+		min-height: 12.675rem;
 		padding: 2rem 3.5rem;
 
 		@media (max-width: $md2+px) {
@@ -40,7 +40,7 @@
 			}
 		}
 		&_3 {
-			flex: 0 0 auto;
+			flex: 0 0 auto; 
 			display: flex;
 			align-items: center;
 			margin-left: 7rem;
@@ -93,6 +93,14 @@
 				top: 12.5rem;
 				pointer-events: auto;
 
+				& .drop-menu__list{
+					pointer-events: auto;
+
+					& > a {
+						pointer-events: auto;
+					}
+				}
+
 				@media (max-width: $md2+px) {
 					top: 9.5rem;
 				}
@@ -117,8 +125,17 @@
 
 				& .drop-menu {
 					opacity: 1;
-					top: 12.5rem;
+					top: 10.5rem;
 					pointer-events: auto;
+					z-index: 2;
+				}
+
+				& .drop-menu__list{
+					pointer-events: auto;
+
+					& > a {
+						pointer-events: auto;
+					}
 				}
 			}
 		}
@@ -146,6 +163,7 @@
 	&__switch-btn-drop-menu {
 		z-index: 2;
 
+
 		& .drop-menu__list {
 			position: static;
 			top: 0;
@@ -159,7 +177,7 @@
 			text-align: center;
 			opacity: 1;
 			z-index: -1;
-			pointer-events: auto;
+			
 		}
 	}
 
@@ -223,14 +241,14 @@
 
 					& .drop-menu {
 						opacity: 1;
-						top: 12.5rem;
+						top: 10.5rem;
 						pointer-events: auto;
 						z-index: 2;
 					}
 
 					& .drop-menu__list {
 						opacity: 1;
-						top: 12.5rem;
+						top: 10.5rem;
 						pointer-events: auto;
 						z-index: 2;
 					}
@@ -457,7 +475,7 @@
 
 	&__list {
 		position: absolute;
-		top: 15rem;
+		top: 13rem;
 		left: 50%;
 		transform: translateX(-50%);
 		background: #fff;
@@ -469,14 +487,18 @@
 		text-align: center;
 		opacity: 0;
 		z-index: -1;
-		pointer-events: none;
+
+			pointer-events: none;
+
+
 
 		& > li {
 			& > a {
 				display: inline-block;
-				padding: 2.3rem 1.5rem;
+				padding: 2rem 1.5rem;
 				transition: all .2s ease;
 				color: #000000;
+				line-height: 1.8em;
 				font-size: 1.2rem;
 				font-weight: 700;
 				letter-spacing: 0.5rem;
@@ -503,6 +525,7 @@
 		}
 	}
 	&__item {
+
 		& > a {
 			display: inline-block;
 			padding: 2.3rem 1.5rem;

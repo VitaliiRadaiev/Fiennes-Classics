@@ -71,7 +71,7 @@ let _slideToggle = (target, duration = 500) => {
 $(document).ready(function() {
 	@@include('popup.js');
 	@@include('burger.js');
-	@@include('scroll-anim.js');
+	@@include('scroll-anim.js'); 
 
 // === Проверка, поддержка браузером формата webp ==================================================================
 
@@ -137,7 +137,7 @@ $('img.img-svg').each(function(){
 // === // MARQUES ==================================================================
 
 // === CONTACT ==================================================================
-@@include('#contact.js');
+@@include('#contact.js'); 
 // === // CONTACT ==================================================================
 
 });

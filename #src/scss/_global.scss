@@ -99,13 +99,15 @@ a {
 }
 
 ._anim-items {
-	transition: all .8s ease;
-	transform: translate(0, 120%);
-	opacity: 0;
-	&._active {
-		transition: all .8s ease;
-		transform: translate(0, 0);
-		opacity: 1;
+
+
+	&.fadeIn {
+		transition: all 1.6s ease;
+		opacity: 0;
+
+		&._active {
+			opacity: 1;
+		}
 	}
 }
 
@@ -191,7 +193,7 @@ a {
 }
 
 .logo {
-	max-width: 22.6rem;
+	max-width: 18.08rem;
 	width: 100%;
 
 	& img {
@@ -211,54 +213,48 @@ a {
 .title-1 {
 	color: #000000;
 	font-family: $mainFontFamily;
-	font-size: 5rem;
+	font-size: 4.4rem;
 	font-weight: 700;
-	letter-spacing: 0.45rem;
-	line-height: 7rem;
+	letter-spacing: 0.09em;
+	line-height: 6.6rem;
 	text-transform: uppercase;
 
 	@media (max-width: 1023px) {
 		font-size: 4rem;
-		letter-spacing: 0.657rem;
 		line-height: 6rem;
 	}
 
 	@media (max-width: $md3+px) {
 		font-size: 3rem;
-		letter-spacing: 0.457rem;
 		line-height: 4rem;
 	}
 
 	@media (max-width: $md4+px) {
 		font-size: 2.2rem;
-		letter-spacing: 0.357rem;
 		line-height: 3rem;
 	}
 }
 .title-2 {
 	color: #231f20;
 	font-family: $mainFontFamily;
-	font-size: 5rem;
+	font-size: 4.2rem;
 	font-weight: 700;
-	letter-spacing: 0.857rem;
+	letter-spacing: 0.17em;
 	text-transform: uppercase;
-	line-height: 7rem;
+	line-height: 6.2rem;
 
 	@media (max-width: 1023px) {
 		font-size: 4rem;
-		letter-spacing: 0.657rem;
 		line-height: 6rem;
 	}
 
 	@media (max-width: $md3+px) {
 		font-size: 3rem;
-		letter-spacing: 0.457rem;
 		line-height: 4rem;
 	}
 
 	@media (max-width: $md4+px) {
 		font-size: 2.2rem;
-		letter-spacing: 0.357rem;
 		line-height: 3rem;
 	}
 
@@ -267,41 +263,36 @@ a {
 .title-3 {
 	color: #231f20;
 	font-family: $mainFontFamily;
-	font-size: 3.5rem;
+	font-size: 3.1rem;
 	font-weight: 700;
-	letter-spacing: 0.5rem;
-	line-height: 5rem;
+	letter-spacing: 0.142em;
+	line-height: 4.6rem;
 	text-transform: uppercase;
 
 	@media (max-width: $md3+px) {
 		font-size: 2.5rem;
-		letter-spacing: 0.3rem;
+		letter-spacing: 0.142em;
 		line-height: 4rem;
 	}
 
 	@media (max-width: $md4+px) {
 		font-size: 2rem;
-		letter-spacing: 0.2rem;
+		letter-spacing: 0.142em;
 		line-height: 3rem;
 	}
 }
 .suptitle {
 	color: #231f20;
 	font-family: $mainFontFamily;
-	font-size: 1.5rem;
+	font-size: 1.3rem;
 	font-weight: 700;
-	letter-spacing: 0.214rem;
-	line-height: 2rem;
+	letter-spacing: 0.142em;
+	line-height: 1.8rem;
 	text-transform: uppercase;
-
-	@media (max-width: $md3+px) {
-		font-size: 1.4rem;
-		letter-spacing: 0.3rem;
-	}
 
 	@media (max-width: $md4+px) {
 		font-size: 1.2rem;
-		letter-spacing: 0.2rem;
+		letter-spacing: 0.142em;
 	}
 }
 // === and title ========================================================================
@@ -312,9 +303,9 @@ a {
 .btn-default {
 	border: 1px solid #5a91ab;
 	color: #5a91ab;
-	font-size: 1.4rem;
+	font-size: 1.2rem;
 	font-weight: 700;
-	letter-spacing: 0.35rem;
+	letter-spacing: 0.25em;
 	line-height: 1.2em;
 	text-transform: uppercase;
 	padding: 1.3em 3.6em;
@@ -383,7 +374,7 @@ a {
 				@media (max-width: $md3+px) {
 					line-height: 4rem;
 					margin-bottom: 3rem;
-					letter-spacing: 0.5rem;
+					letter-spacing: 0.125em;
 				}
 
 				@media (max-width: $md3+px) {
@@ -433,6 +424,129 @@ a {
 	&__body {
 		display: flex;
 		flex-direction: column;
+
+		&._anim-items {
+
+			& .text-block__line {
+				transition: all .8s linear;
+				opacity: 0;
+			}
+
+			& .text-block__suptitle {
+				transition: all .8s linear;
+				opacity: 0;
+			}
+
+			& .text-block__title {
+				transition: all .8s linear;
+				opacity: 0;
+			}
+
+			& .text-block__text {
+				& p {
+					transition: all .8s linear;
+
+					opacity: 0;
+				}
+			}
+
+			& .text-block__btn-wrap {
+				transition: all .8s linear;
+				opacity: 0;
+			}
+
+			&._active {
+				& .text-block__line {
+					transition: all .8s linear;
+					opacity: 1;
+				}
+
+				& .text-block__suptitle {
+					transition: all .8s linear;
+					opacity: 1;
+				}
+
+				& .text-block__title {
+					transition: all .8s linear 0.2s;
+					opacity: 1;
+				}
+
+				& .text-block__text {
+					& p {
+						transition: all .8s linear 0.4s;
+						opacity: 1;
+
+						&:nth-child(2) {
+							transition: all .8s linear 0.45s;
+						}
+						&:nth-child(3) {
+							transition: all .8s linear 0.5s;
+						}
+						&:nth-child(4) {
+							transition: all .8s linear 0.55s;
+						}
+						&:nth-child(5) {
+							transition: all .8s linear 0.6s;
+						}
+						&:nth-child(6) {
+							transition: all .8s linear 0.6s;
+						}
+						&:nth-child(7) {
+							transition: all .8s linear 0.6s;
+						}
+						&:nth-child(8) {
+							transition: all .8s linear 0.6s;
+						}
+						&:nth-child(9) {
+							transition: all .8s linear 0.6s;
+						}
+						&:nth-child(10) {
+							transition: all .8s linear 0.6s;
+						}
+					}
+
+					&:first-child {
+						& p {
+							transition: all .8s linear 0s;
+							opacity: 1;
+
+							&:nth-child(2) {
+								transition: all .8s linear 0.1s;
+							}
+							&:nth-child(3) {
+								transition: all .8s linear 0.2s;
+							}
+							&:nth-child(4) {
+								transition: all .8s linear 0.3s;
+							}
+							&:nth-child(5) {
+								transition: all .8s linear 0.4s;
+							}
+							&:nth-child(6) {
+								transition: all .8s linear 0.5s;
+							}
+							&:nth-child(7) {
+								transition: all .8s linear 0.6s;
+							}
+							&:nth-child(8) {
+								transition: all .8s linear 0.7s;
+							}
+							&:nth-child(9) {
+								transition: all .8s linear 0.8s;
+							}
+							&:nth-child(10) {
+								transition: all .8s linear 0.9s;
+							}
+						}
+					}
+				}
+
+				& .text-block__btn-wrap {
+					transition: all .8s linear 0.6s;
+					opacity: 1;
+				}
+			}
+		}
 	}
 
 	&__line {
@@ -460,6 +574,7 @@ a {
 		margin-bottom: 4rem;
 		max-width: 90rem;
 
+
 		@media (max-width: $md3+px) {
 			margin-bottom: 3rem;
 		}
@@ -473,10 +588,12 @@ a {
 		max-width: 908px;
 		color: #231f20;
 		font-family: $seconFontFamily;
-		font-size: 2rem;
+		font-size: 1.7rem;
 		font-weight: 300;
-		line-height: 2.5rem;
-		margin-bottom: 4.8rem;
+		line-height: 2.3rem;
+		margin-bottom: 4.6rem;
+
+
 
 		& p {
 
@@ -489,18 +606,12 @@ a {
 			font-size: 1.6rem;
 			font-weight: 300;
 			line-height: 2rem;
-			margin-bottom: 5.8rem;
-		}
-
-		@media (max-width: $md3+px) {
-			font-size: 1.6rem;
-			font-weight: 300;
-			line-height: 2rem;
 			margin-bottom: 3.8rem;
 		}
 	}
 
 	&__btn-wrap {
+
 
 	}
 }
@@ -580,6 +691,26 @@ a {
 		border-bottom: 10px solid #5a92ab;
 		margin-bottom: 1rem;
 
+		&:hover {
+			&:before {
+				opacity: 1;
+			}
+		}
+
+		&:before {
+			position: absolute;
+			content: '';
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 2;
+			background: rgba(#000, 0.1);
+			transition: all .2s ease;
+			opacity: 0;
+			pointer-events: none;
+		}
+
 		@media (max-width: $md3+px) {
 			margin-bottom: 0rem;
 		}
@@ -590,18 +721,16 @@ a {
 		flex: 1 1 auto;
 		display: flex;
 		flex-direction: column;
-		@media (max-width: 1440px) {
-			padding: 2rem 1rem;
-		}
+		
 	}
 
 	&__title {
 		color: #000000;
-		font-size: 1.8rem;
+		font-size: 1.6rem;
 		font-weight: 500;
-		line-height: 3rem;
+		line-height: 2.8rem;
 		text-transform: uppercase;
-		margin-bottom: 1.7rem;
+		margin-bottom: 1.5rem;
 		flex: 1 1 auto;
 		@media (max-width: $md4+px) {
 			margin-bottom: 1.5rem;
@@ -610,9 +739,9 @@ a {
 	&__text {
 		color: #000000;
 		font-family: $seconFontFamily;
-		font-size: 1.5rem;
+		font-size: 1.3rem;
 		font-weight: 500;
-		line-height: 2rem;
+		line-height: 1.8rem;
 	}
 
 	&__bottom {
@@ -631,9 +760,9 @@ a {
 		margin-right: 1.5rem;
 		margin-bottom: 2.4rem;
 		color: #000000;
-		font-size: 1.4rem;
+		font-size: 1.2rem;
 		font-weight: 500;
-		line-height: 1.6rem;
+		line-height: 1.4rem;
 
 		& > a {
 			color: $mainColor;
@@ -646,9 +775,9 @@ a {
 		flex: 0 0 auto;
 		margin-bottom: 2rem;
 		color: #000000;
-		font-size: 1.4rem;
+		font-size: 1.2rem;
 		font-weight: 500;
-		line-height: 1.6rem;
+		line-height: 1.4rem;
 		margin-right: 5%;
 	}
 	&__hr {
@@ -663,9 +792,9 @@ a {
 		display: flex;
 		align-items: center;
 		color: #000000;
-		font-size: 1.4rem;
+		font-size: 1.2rem;
 		font-weight: 500;
-		line-height: 1.6rem;
+		line-height: 1.4rem;
 		text-transform: uppercase;
 
 		& > span {
@@ -710,6 +839,82 @@ a {
 		@media (max-width: $md3+px) {
 			padding: 2rem 2rem;
 		}
+
+		&._anim-items {
+			& .card__suptitle {
+				transition: all .8s linear;
+				opacity: 0;
+			}
+
+			& .card__title {
+				transition: all .8s linear;
+				opacity: 0;
+			}
+
+			& .card__text {
+				& p {
+					transition: all .8s linear;
+					opacity: 0;
+				}
+			}
+
+			& .card__btn-wrap {
+				transition: all .8s linear;
+				opacity: 0;
+			}
+
+			&._active {
+				& .card__suptitle {
+					transition: all .8s linear;
+					opacity: 1;
+				}
+
+				& .card__title {
+					transition: all .8s linear 0.2;
+					opacity: 1;
+				}
+
+				& .card__text {
+					& p {
+						transition: all .8s linear 0.4s;
+						opacity: 1;
+
+						&:nth-child(2) {
+							transition: all .8s linear 0.45s;
+						}
+						&:nth-child(3) {
+							transition: all .8s linear 0.5s;
+						}
+						&:nth-child(4) {
+							transition: all .8s linear 0.55s;
+						}
+						&:nth-child(5) {
+							transition: all .8s linear 0.6s;
+						}
+						&:nth-child(6) {
+							transition: all .8s linear 0.6s;
+						}
+						&:nth-child(7) {
+							transition: all .8s linear 0.6s;
+						}
+						&:nth-child(8) {
+							transition: all .8s linear 0.6s;
+						}
+						&:nth-child(9) {
+							transition: all .8s linear 0.6s;
+						}
+						&:nth-child(10) {
+							transition: all .8s linear 0.6s;
+						}
+					}
+				}
+
+				& .card__btn-wrap {
+					transition: all .8s linear 0.6s;
+					opacity: 1;
+				}
+			}	
+		}
 	}
 
 	&__text {
@@ -717,10 +922,11 @@ a {
 		& > p {
 			color: #231f20;
 			font-family: $seconFontFamily;
-			font-size: 2rem;
+			font-size: 1.7rem;
 			font-weight: 300;
-			line-height: 2.6rem;
+			line-height: 2.4rem;
 			max-width: 58.5rem;
+
 
 			&:not(:last-child) {
 				margin-bottom: 2rem;
@@ -734,9 +940,10 @@ a {
 	}
 
 	&__suptitle {
-		margin-bottom: 1.5rem;
+		margin-bottom: 1.3rem;
 		max-width: 58.5rem;
 		font-weight: 700;
+		text-transform: uppercase;
 
 		@media (max-width: $md3+px) {
 			margin-bottom: 1rem;
@@ -779,21 +986,32 @@ a {
 	display: flex;
 	align-items: center;
 	justify-content: flex-end;
-	padding: 2rem 0;
-	@media (max-width: 1400px) {
+	padding: 1rem 0;
+	@media (max-width: 1300px) {
 		justify-content: center;
 	}
 	& > a {
 		display: inline-flex;
 		min-height: 4rem;
-		flex: 0 0 4rem;
+		flex: 0 0 2.5rem;
 		justify-content: center;
 		align-items: center;
 		transition: all .2s ease;
 
 		&:not(:last-child) {
-			margin-right: 1.42rem;
+			margin-right: 2rem;
 		}
+
+		&:first-child {
+			flex: 0 0 1.2rem;
+		}
+
+		& > svg {
+			height: auto;
+			width: 100%;
+		}
+
+
 		& svg path {
 			fill: #d8d8d8;
 
@@ -863,6 +1081,19 @@ a {
 
 			@media (max-width: $md3+px) {
 				margin-top: 1.5rem;
+			}
+		}
+
+		& .three-img-block-v2__item {
+			&:nth-child(3n+1) {
+				width: 100%;
+				padding-bottom: 50%;
+			}
+
+			&:nth-child(3n) {
+				width: calc(50% - 1.6rem);
+				height: 0;
+				padding-bottom: 33%;
 			}
 		}
 	}
@@ -1034,12 +1265,12 @@ a {
 	}
 	&__suptitle {
 		color: #ffffff;
-		font-size: 1.5rem;
+		font-size: 1.3rem;
 		font-weight: 700;
-		letter-spacing: 0.214rem;
-		line-height: 1.8rem;
+		letter-spacing: 0.142em;
+		line-height: 1.6rem;
 		text-transform: uppercase;
-		margin-bottom: 2rem;
+		margin-bottom: 1.8rem;
 
 		@media (max-width: $md3+px) {
 			margin-bottom: 1.5rem;
@@ -1050,18 +1281,17 @@ a {
 		}
 	}
 	&__title {
-		font-size: 5.8rem;
+		font-size: 5.2rem;
 		font-weight: 700;
-		letter-spacing: 0.845rem;
-		line-height: 6.5rem;
+		letter-spacing: 0.145em;
+		line-height: 5.5rem;
 		text-transform: uppercase;
-		margin-bottom: 8rem;
-		margin-top: 2rem;
+		margin-bottom: 7rem;
+		margin-top: 1.8rem;
 
 		@media (max-width: $md3+px) {
 			font-size: 3.6rem;
 			font-weight: 700;
-			letter-spacing: 0.645rem;
 			line-height: 4.4rem;
 			margin-bottom: 5rem;
 			margin-top: 1.5rem;
@@ -1070,7 +1300,6 @@ a {
 		@media (max-width: $md4+px) {
 			font-size: 2.6rem;
 			font-weight: 700;
-			letter-spacing: 0.445rem;
 			line-height: 3.4rem;
 			margin-bottom: 3rem;
 			margin-top: 1.5rem;
@@ -1100,10 +1329,14 @@ a {
 	&__text {
 		color: #231f20;
 		font-family: $seconFontFamily;
-		font-size: 2.8rem;
+		font-size: 2.4rem;
 		font-weight: 300;
-		line-height: 4rem;
+		line-height: 3.6rem;
 		margin-bottom: 1rem;
+
+		& > p {
+			display: inline;
+		}
 
 		& > span {
 			color: #5a92ab;
@@ -1133,54 +1366,125 @@ a {
 		font-weight: 500;
 	}
 
+	& .swiper-slide {
+		& .swiper-pagination {
+			display: flex;
+		}
+	}
+
 	& .swiper-pagination  {
+
+		margin-top: 5.5rem;
+		position: static;
+		align-items: center;
+		text-align: left;
+
+		@media (max-width: $md4+px) {
+			margin-top: 1.5rem;
+		}
+
+		& > .swiper-pagination-bullet {
+			position: relative;
+			height: 0.4rem;
+			width: 17.5%;
+			z-index: 5;
+			opacity: 1;
+			border-radius: 0;
+			//padding: 2.5rem 0;
+			background: transparent;
+			margin: 0px 6px !important;
+			background: rgba(0, 0, 0, 0.3);
+			border-radius: 5px;
+
+			&.isShow {
+				& > .progress {
+					transform: scaleX(1) !important;
+				}
+			}
+
+			& > .progress {
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				//height: 0.4rem;
+				//width: 0%;
+				background: rgba(0, 0, 0, 0.6);
+				z-index: 2;
+				border-radius: 5px;
+				transform: scaleX(0);
+				transform-origin: left;
+				
+			}
+
+			@keyframes dash {
+				from {
+					transform: scaleX(0);
+				}
+				to {
+					transform: scaleX(1);
+				}
+			}
+
+			&.swiper-pagination-bullet-active {
+				& > .progress {
+					 animation: dash 8.1s linear forwards;
+				}
+			}
+		}
+
+
+	}
+
+	& .scrollbar-wrap {
 		margin-top: 5.5rem;
 		position: static;
 		text-align: left;
-		display: flex;
+		display: none;
 		align-items: center;
 
 		@media (max-width: $md4+px) {
 			margin-top: 1.5rem;
 		}
 
-		& > span {
-			flex: 1 1 auto;
-			position: relative;
-			height: 0.3rem;
-			max-width: 17.5%;
-			z-index: 5;
-			opacity: 1;
+		position: static;
+		bottom: 2.7rem;
+		z-index: 5;
+		left: 50%;
+		//transform: translateX(-50%);
+		display: flex;
+		justify-content: center;
+		align-items: flex-end;
+		height: 9rem;
+		width: 70%;
+		margin: 0 auto 0.5rem;
+
+		@media (max-width: 1024px) {
+			width: 65%;
+		}
+
+		@media (max-width: $md3+px) {
+			height: 6rem;
+		}
+
+		@media (max-width: $md3+px) {
+			height: 4rem;
+		}
+
+
+		& .swiper-scrollbar {
+			position: static;
 			border-radius: 0;
-			padding: 2.5rem 0;
-			background: transparent;
-			margin: 0px 6px !important;
+			flex: 1 1 auto;
+			margin: 0 !important;
+			height: 4px;
+			background: rgba(#000, 0.25);
+		}
 
-			&:after {
-				position: absolute;
-				content: '';
-				top: 50%;
-				left: 0;
-				transform: translateY(-50%);
-				width: 100%;
-				z-index: 1;
-				background: rgba(125, 125, 125, 0.57);
-				height: 0.3rem;
-			}
-
-			&.swiper-pagination-bullet-active:before {
-				position: absolute;
-				content: '';
-				top: 50%;
-				transform: translateY(-50%);
-				left: 0;
-				height: 0.3rem;
-				width: 50%;
-				background: rgba(125, 125, 125, 0.87);
-				z-index: 2;
-				animation: dotAnim .6s ease;
-			}
-
+		& .swiper-scrollbar-drag {
+			height: 4px;
+			background: rgba(#000, 0.75);
 		}
 	}
 }

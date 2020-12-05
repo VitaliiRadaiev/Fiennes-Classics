@@ -14,7 +14,7 @@
 	}
 	&__row {
 		&_1 {
-			min-height: 20rem;
+			min-height: 16rem;
 			display: flex;
 			align-items: center;
 		}
@@ -23,16 +23,16 @@
 			justify-content: space-between;
 			flex-wrap: wrap;
 
-			@media (max-width: 1400px) {
+			@media (max-width: 1300px) {
 				display: block;
 			}
 		} 
 	}
 	&__logo {
 		&.logo {
-			max-width: 24.3rem;
+			max-width: 16rem;
 		}
-		@media (max-width: 1400px) {
+		@media (max-width: 1300px) {
 			margin: 0 auto;
 		}
 	}
@@ -41,12 +41,12 @@
 			flex: 1 1 auto;
 		}
 		&_2 {
-			flex: 0 0 calc(21rem + 15%);
+			flex: 0 0 calc(19rem + 15%);
 			display: flex;
 			flex-direction: column;
 			align-items: flex-end;
 
-			@media (max-width: 1400px) {
+			@media (max-width: 1300px) {
 				align-items: center;
 			}
 		}
@@ -54,7 +54,7 @@
 	&__nav {
 		display: flex;
 		flex-wrap:  wrap;
-		@media (max-width: 1400px) {
+		@media (max-width: 1300px) {
 			justify-content: space-between;
 		}
 
@@ -85,11 +85,19 @@
 
 	&__nav-title {
 		color: #5a91ab;
-		font-size: 1.5rem;
-		font-weight: 700;
-		letter-spacing: 0.214rem;
+		font-size: 1.3rem;
+		font-weight: 600;
+		letter-spacing: 0.142em;
 		text-transform: uppercase;
-		margin-bottom: 3.3rem;
+		margin-bottom: 3.1rem;
+
+		& > a {
+			color: #5a91ab;
+			font-size: 1.3rem;
+			font-weight: 600;
+			letter-spacing: 0.142em;
+			text-transform: uppercase;
+		}
 	}
 
 	&__nav-list {
@@ -100,9 +108,9 @@
 
 		& > a {
 			color: #231f20;
-			font-size: 1.6rem;
-			line-height: 1.8rem;
-
+			font-size: 1.3rem;
+			line-height: 1.5rem;
+			font-weight: 400;
 			&:hover {
 				text-decoration: underline;
 			}
@@ -115,12 +123,12 @@
 	}
 	&__action-title {
 		color: #231f20;
-		font-size: 2rem;
+		font-size: 1.8rem;
 		font-weight: 500;
-		margin-bottom: 2.2rem;
+		margin-bottom: 2rem;
 		text-align: right;
 
-		@media (max-width: 1400px) {
+		@media (max-width: 1300px) {
 			text-align: center;
 		}
 	}
@@ -130,7 +138,7 @@
 		width: 100%;
 
 		& input {
-			min-height: 6.1rem;
+			min-height: 5.1rem;
 			padding: 1.5rem 2rem 1.5rem 0;
 			flex: 1 1 auto;
 			width: 100%;
@@ -156,7 +164,7 @@
 			justify-content: flex-end;
 			align-items: center;
 			background: #fff;
-			min-height: 6.1rem;
+			min-height: 5.1rem;
 			transition: all .2s ease;
 			color: #231f20;
 			font-size: 1.2rem;
@@ -192,7 +200,7 @@
 			align-items: center;
 			flex-wrap: wrap;
 
-			@media (max-width: 1400px) {
+			@media (max-width: 1300px) {
 				justify-content: center;
 			}
 

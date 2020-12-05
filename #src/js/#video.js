@@ -3,12 +3,10 @@ function cardVideoHandler() {
 		if(video.paused) {
 			video.play();
 			btn.firstElementChild.className = 'icon-pause2';
-			btn.firstElementChild.style.marginLeft = '0px';
 
 		} else {
 			video.pause();
 			btn.firstElementChild.className = 'icon-play3';
-			btn.firstElementChild.style.marginLeft = '0.4rem';
 		}
 	}
 
@@ -31,7 +29,6 @@ function cardVideoHandler() {
 				video.addEventListener('ended', () => {
 					video.pause();
 					btn.firstElementChild.className = 'icon-play3';
-					btn.firstElementChild.style.marginLeft = '0.4rem';
 				});
 				video.addEventListener('mousemove', (e) => { 
 					if(!video.paused) {

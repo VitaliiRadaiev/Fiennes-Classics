@@ -26,6 +26,8 @@
 
 		tabs.forEach(contetn => {
 			addColumns(contetn.querySelector('.info-block__tabs-text-wrap'));
+			distributeEl(contetn.querySelector('.info-block__tabs-text-wrap'))
+			contetn.style.display = 'none'
 		})
 
 
@@ -54,6 +56,49 @@
 				block.append(column);
 			}
 
+		}
+
+		function distributeEl(block) {
+			let thamb = true;
+			let count = 0;
+			while (thamb) {
+
+				console.log('tick')
+				let column1 = block.children[0];
+				let column2 = block.children[1];
+				let column3 = block.children[2];
+
+				const findHeight = (column) => {
+					let count = 0;
+					for(let el of column.children) {
+						count += el.scrollHeight;
+					}
+					return count;
+				}
+
+				findHeight(column2)
+
+				let arrElHeight = [findHeight(column1), findHeight(column2), findHeight(column3)];
+				let maxHeight = Math.max(...arrElHeight);
+				let maxHeightIndex = arrElHeight.indexOf(maxHeight)
+
+				let minHeight = Math.min(...arrElHeight);
+				let minHeightIndex = arrElHeight.indexOf(minHeight)
+
+
+				if(maxHeight - minHeight > 200) {
+					let el = block.children[maxHeightIndex].lastElementChild;
+					block.children[minHeightIndex].append(el);
+				} else {
+					thamb = false;
+				}
+
+				count++;
+
+				if(count >= 10) {
+					thamb = false;
+				}
+			}
 		}
 	}
 }

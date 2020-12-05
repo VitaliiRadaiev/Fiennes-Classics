@@ -7,15 +7,15 @@
 	if(isMap) {
 		var map;
 
-		let center = {
-			lat: 51.735542,
-			lng: -1.666285,
-		}
+		// let center = {
+		// 	lat: 51.735394,
+		// 	lng: -1.666271,
+		// }
 
-		let markerPosition = {
-			lat: 51.735542,
-			lng: -1.666285,
-		}
+		// let markerPosition = {
+		// 	lat: 51.735394,
+		// 	lng: -1.666271,
+		// }
 
 		// Функция initMap которая отрисует карту на странице
 		function initMap() {
@@ -24,10 +24,10 @@
 			map = new google.maps.Map(document.getElementById('map'), {
 				// При создании объекта карты необходимо указать его свойства
 				// center - определяем точку на которой карта будет центрироваться
-				center: {lat: center.lat, lng: center.lng},
+				center: {lat: +global.lat, lng: +global.lng},
 				// zoom - определяет масштаб. 0 - видно всю платнеу. 18 - видно дома и улицы города.
 
-				zoom: 14,
+				zoom: 16,
 
 				// Добавляем свои стили для отображения карты
 				//styles: 
@@ -37,7 +37,7 @@
 			var marker = new google.maps.Marker({
 
 				// Определяем позицию маркера
-			    position: {lat: markerPosition.lat, lng: markerPosition.lng},
+			    position: {lat: +global.lat, lng: +global.lng},
 
 			    // Указываем на какой карте он должен появится. (На странице ведь может быть больше одной карты)
 			    map: map,

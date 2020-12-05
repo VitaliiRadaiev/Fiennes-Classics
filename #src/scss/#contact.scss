@@ -33,7 +33,7 @@
 	margin-left: auto;
 	margin-right: auto;
 	width: 100%;
-	max-width: 141rem;
+	max-width: 130rem;
 	padding: 0 3rem;
 
 	@media (max-width: $md3+px) {
@@ -94,7 +94,7 @@
 	}
 	&__input {
 		width: 100%;
-		max-width: 79.6rem;
+		max-width: 63.68rem;
 		margin-left: 4rem;
 
 		@media (max-width: $md2+px) {
@@ -104,7 +104,7 @@
 	}
 
 	&__textarea {
-		max-width: 79.6rem;
+		max-width: 63.68rem;
 		width: 100%;
 		margin-left: 4rem;
 		min-height: 25.7rem;
@@ -141,7 +141,7 @@
 
 
 .input {
-	min-height: 6.5rem;
+	min-height: 5rem;
 	border: 1px solid #979797;
 	width: 100%;
 	padding: 1.5rem 2.5rem;
@@ -251,7 +251,7 @@
 	&__item {
 		position: relative;
 	}
-	// .select__title
+	// .select__title 
 	&__title {
 		background-color: #fff;
 		cursor: pointer;
@@ -275,11 +275,12 @@
 		letter-spacing: 0.286rem;
 		color: #231f20;
 		span {
-			height: 1em;
-			overflow: hidden;
+			height: auto;
+			//overflow: hidden;
 			display: -webkit-box;
 			-webkit-line-clamp: 1;
 			-webkit-box-orient: vertical;
+			font-family: $mainFontFamily;
 		}
 		&:before {
 			content: "";

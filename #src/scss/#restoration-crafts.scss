@@ -8,6 +8,10 @@
 
 		& .video-block__body {
 		    border-bottom: 10px solid #5a92ab;
+
+		    & .video-block__play-pause {
+		    	top: 81%;
+		    }
 		}
 	}
 
