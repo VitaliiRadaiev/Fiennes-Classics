@@ -1,6 +1,6 @@
 .ownership { 
 	&__hero {
-		margin-bottom: 5rem; 
+		margin-bottom: 6.6rem; 
 
 		padding: 0 3rem;
 
@@ -10,41 +10,44 @@
 	}
 
 	&__advantages {
-		margin: 17.2rem 0 8rem;
+		margin: 4rem 0 0rem;
 		background-color: #f9f9f9;
 		background-image: linear-gradient(180deg, #f9f9f9 0%, #ffffff 100%);
-		padding-top: 17.6rem;
+		padding-top: 8.6rem;
 
 		@media (max-width: 1023px) {
-			margin: 14rem 0 8rem;
+			margin: 4rem 0 0rem;
 		}
 
 		@media (max-width: $md3+px) {
-			margin: 12rem 0 8rem;
+			margin: 0rem 0 0rem;
+			padding-top: 6rem;
 		}
 
 		@media (max-width: $md4+px) {
-			margin: 4rem 0 7rem;
+			margin: 0rem 0 0rem;
 			padding-top: 6rem;
 		}
+
 	}
 
 	&__servicing {
-		margin: 8.5rem 0 8rem;
+		margin: 4rem 0 0rem;
 		background-color: #f9f9f9;
 		background-image: linear-gradient(180deg, #f9f9f9 0%, #ffffff 100%);
-		padding-top: 17.6rem;
+		padding-top: 8.6rem;
 
 		@media (max-width: 1023px) {
-			margin: 14rem 0 8rem;
+			margin: 4rem 0 0rem;
 		}
 
 		@media (max-width: $md3+px) {
-			margin: 12rem 0 8rem;
+			margin: 0rem 0 0rem;
+			padding-top: 6rem;
 		}
 
 		@media (max-width: $md4+px) {
-			margin: 4rem 0 7rem;
+			margin: 0rem 0 0rem;
 			padding-top: 6rem;
 		}
 
@@ -62,9 +65,9 @@
 	}
 
 	&__list {
-		margin: 14rem 0 6rem;
+		margin: 6.6rem 0 0rem;
 		@media (max-width: $md3+px) {
-			margin: 8rem 0 0rem;
+			margin: 6rem 0 0rem;
 			& .container_large-1400 {
 				padding: 0;
 			}

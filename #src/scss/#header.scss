@@ -1,7 +1,53 @@
-.header { 
+.header {
 	position: relative;
 	z-index: 50;
 
+	&__mobile-btn {
+		display: flex;
+		justify-content: flex-end;
+		min-height: 30px;
+		background: $mainColor;
+		color: white;
+		text-transform: uppercase;
+		font-weight: 400;
+		font-size: 9px;
+		padding: 5px 15px;
+		letter-spacing: 0.1em;
+		transition: all .2s ease;
+		line-height: 16px;
+		position: relative;
+		padding-right: 33px;
+
+		&._active {
+			& > span {
+				transform: translateY(-50%) rotate(0deg);
+			}
+		}
+
+		& > span {
+			position: absolute;
+			top: 45%;
+			right: 14px;
+			width: 10px;
+			height: 10px;
+			display: inline-block;
+			transform: translateY(-50%) rotate(-90deg);
+			transition: all .2s ease;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			& img {
+				max-width: 100%;
+				max-height: 100%;
+			}
+		}
+
+		@media (min-width: 768px) {
+			display: none;
+		}
+
+
+	}
 
 	&__top {
 		display: flex;
@@ -10,10 +56,18 @@
 		min-height: 30px;
 		background: $mainColor;
 		align-items: center;
+		overflow: hidden;
 
 		@media (max-width: $md3+px) {
-			justify-content: center;
-			align-items: normal;
+			display: none;
+			text-align: right;
+			background-color: transparent;
+			padding: 0 15px;
+			min-height: auto;
+		}
+
+		@media (min-width: 768px) {
+			display: flex !important;
 		}
 
 		& > li {
@@ -21,8 +75,8 @@
 			margin-right: -1px;
 
 			@media (max-width: $md3+px) {
-				flex: 0 0 50%;
 				margin-right: 0px;
+				border-bottom: 1px solid rgba(#000, 0.2);
 			}
 
 				&:before {
@@ -69,12 +123,15 @@
 		}
 
 		@media (max-width: $md3+px) {
-			display: inline-flex;
-			justify-content: center;
+			display:flex;
+			justify-content: flex-end;
 			align-items: center;
 			width: 100%;
 			height: 100%;
-			text-align: center;
+			text-align: right;
+			color: #000;
+			font-size: 9px;
+			line-height: 24px;
 		}
 	}
 
@@ -278,6 +335,27 @@
 			display: block !important;
 		}
 	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//==========================================
+//	=======================================
+
 	&__menu-list {
 		display: flex;
 		flex-wrap: wrap;
@@ -295,6 +373,8 @@
 			@media (max-width: $md2+px) {
 				margin-right: 0;
 				text-align: center; 
+
+
 			}
 
 			@media (min-width: 992px) {
@@ -312,7 +392,7 @@
 					}
 
 					& > a {
-						color: #5a92ab;
+						color: $mainColor;
 						&:before {
 							width: 100%;
 						}
@@ -336,7 +416,7 @@
 
 			&.current-menu-parent {
 				& > a {
-					color: #5a92ab;
+					color: $mainColor;
 					&:before {
 						width: 100%;
 					}
@@ -345,7 +425,7 @@
 
 			&.current-menu-item {
 				& > a {
-					color: #5a92ab;
+					color: $mainColor;
 					&:before {
 						width: 100%;
 					}
@@ -353,7 +433,7 @@
 			}
 			&.active {
 				& > a {
-					color: #5a92ab;
+					color: $mainColor;
 					&:before {
 						width: 100%;
 					}
@@ -377,8 +457,8 @@
 					font-size: 1rem;
 				}
 
-				@media (max-width: $md3+px) {
-					font-size: 1.2rem;
+				@media (max-width: $md2+px) {
+					font-size: 1.4rem;
 				}
 
 				&:before {
@@ -389,7 +469,7 @@
 					bottom: 0;
 					height: 0.2rem;
 					width: 00%;
-					background:#5a92ab;
+					background:$mainColor;
 					transition: all .2s ease;
 				}
 			}
@@ -420,7 +500,7 @@
 				}
 
 				& .header__menu-link {
-					color: #5a92ab;
+					color: $mainColor;
 					&:before {
 						width: 100%;
 					}
@@ -458,7 +538,7 @@
 		}
 
 		&.active {
-			color: #5a92ab;
+			color: $mainColor;
 			&:before {
 				width: 100%;
 			}
@@ -472,7 +552,7 @@
 			bottom: 0;
 			height: 0.2rem;
 			width: 00%;
-			background:#5a92ab;
+			background:$mainColor;
 			transition: all .2s ease;
 		}
 
@@ -515,6 +595,30 @@
 		}
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .drop-menu {
 	position: absolute;
@@ -566,8 +670,18 @@
 		text-align: center;
 		opacity: 0;
 		z-index: -1;
+		pointer-events: none;
 
-			pointer-events: none;
+		@media (max-width: $md2+px) {
+			pointer-events: auto;
+			position: static;
+			opacity: 1;
+			transform: translate(0);
+			display: none;
+			margin-bottom: 1rem;
+			padding-top: 0;
+
+		}
 
 
 
@@ -592,6 +706,11 @@
 					& img {
 						width: 100%;
 					}
+				}
+
+				@media (max-width: $md2+px) {
+					font-size: 1rem;
+					padding: 1rem 1.5rem;
 				}
 
 				@media (min-width: 992px) {

@@ -4,25 +4,23 @@
 
 		& .swiper-container {
 			border-bottom: 1rem solid $mainColor;
-			& .swiper-pagination {
-				& .swiper-pagination-bullet-active {
-					& > .progress {
-						 animation: dash 8.1s linear forwards;
-					}
-				}
-				
-			}
 		}
 		@media (max-width: $md3+px) {
 			padding: 0 1.5rem;
 		}
+
+		&.slider {
+			& .hero-slider__body {
+				padding: 0;
+			}
+		}
 	}
 
 	&__text-block {
-		margin: 15.3rem 0 13.3rem;
+		margin: 6.6rem 0 10rem;
 
 		@media (max-width: $md3+px) {
-			margin: 10rem 0 10rem;
+			margin: 6rem 0 6rem;
 		}
 
 		@media (max-width: $md4+px) {
@@ -31,10 +29,10 @@
 	}
 
 	&__text-block-2 {
-		margin: 15.3rem 0 15.3rem;
+		margin: 6.6rem 0 10rem;
 
 		@media (max-width: $md3+px) {
-			margin: 10rem 0 10rem;
+			margin: 6rem 0 6rem;
 		}
 
 		@media (max-width: $md4+px) {
@@ -45,10 +43,22 @@
 	&__images {}
 
 	&__text-block-3 {
-		margin: 15.3rem 0 15.3rem;
+		margin: 6.6rem 0 10rem;
 
 		@media (max-width: $md3+px) {
-			margin: 10rem 0 10rem;
+			margin: 6rem 0 6rem;
+		}
+
+		@media (max-width: $md4+px) {
+			margin: 5rem 0 5rem;
+		}
+	}
+
+	&__text-block-4 {
+		margin: 6.6rem 0 10rem;
+
+		@media (max-width: $md3+px) {
+			margin: 6rem 0 6rem;
 		}
 
 		@media (max-width: $md4+px) {

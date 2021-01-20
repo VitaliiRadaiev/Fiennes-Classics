@@ -630,12 +630,12 @@ a {
 	& .column {
 		width: 50%;
 		padding: 0 2.5rem;
-		margin-bottom: 10.5rem;
+		margin-bottom: 7rem;
 
 		@media (max-width: $md3+px) {
 			padding: 0 1.5rem;
 			width: 100%;
-			margin-bottom: 7.5rem;
+			margin-bottom: 5rem;
 		}
 	}
 }
@@ -854,6 +854,8 @@ a {
 			}
 
 			& .card__text {
+				transition: all .8s linear;
+				opacity: 0;
 				& p {
 					transition: all .8s linear;
 					opacity: 0;
@@ -877,6 +879,8 @@ a {
 				}
 
 				& .card__text {
+					transition: all .8s linear 0.4s;
+					opacity: 1;
 					& p {
 						transition: all .8s linear 0.4s;
 						opacity: 1;
@@ -920,6 +924,17 @@ a {
 	}
 
 	&__text {
+		color: #231f20;
+		font-family: $seconFontFamily;
+		font-size: 1.7rem;
+		font-weight: 300;
+		line-height: 2.4rem;
+		max-width: 58.5rem;
+
+		@media (max-width: $md3+px) {
+			font-size: 1.6rem;
+			line-height: 2rem;
+		}
 
 		& > p {
 			color: #231f20;
@@ -1042,6 +1057,13 @@ a {
 
 // === one-img-block ========================================================================
 .one-img-block {
+	margin: 6.6rem 0 6.6rem; 
+
+
+	@media (max-width: $md4+px) {
+		margin: 5rem 0 5rem;
+	}
+	
 	& img {
 		width: 100%;
 	}
@@ -1072,12 +1094,10 @@ a {
 
 // === three-img-block ========================================================================
 .three-img-block {
-	margin-bottom: 12rem;
-	@media (max-width: $md2+px) {
-		margin-bottom: 10rem;
-	}
+	margin-bottom: 6.6rem;
+
 	@media (max-width: $md3+px) {
-		margin-bottom: 7rem;
+		margin-bottom: 6rem;
 	}
 	&_reverse {
 		& .three-img-block__body {
@@ -1499,3 +1519,48 @@ a {
 }
 // === and reviews slider ========================================================================
 
+
+
+
+
+.leadership__team.club_logos {
+	margin-bottom: 0;
+	& .block-columns-2 {
+		margin: 0 -3rem;
+		width: 100%;
+	}
+
+	& .column {
+		padding: 0 6rem;
+		margin-bottom: 15rem;
+	}
+
+	& .card {
+		& .card__img {
+			padding-bottom: 0%;
+			height: 220px;
+
+			& img {
+				max-width: 100%;
+				max-height: 100%;
+				height: auto;
+				width: auto;
+			}
+		}
+
+		& .card__text-wrap {
+			padding: 0;
+		}
+
+		& .card__subtitle {
+			font-weight: 500;
+		}
+
+		& .card__text {
+			margin-bottom: 30px;
+			font-size: 1.5rem;
+			font-weight: 400;
+			line-height: 2rem;
+		}
+	}
+}

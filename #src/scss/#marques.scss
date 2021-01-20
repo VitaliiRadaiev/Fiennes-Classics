@@ -5,7 +5,7 @@
 	}
 
 	&__subhero {
-		margin: 15.5rem 0 15rem;
+		margin: 7.5rem 0 7.5rem;
 
 		@media (max-width: $md3+px) {
 			margin: 7.5rem 0 15rem;
@@ -17,10 +17,10 @@
 	}
 
 	&__text-block {
-		margin: 15.3rem 0 15rem;
+		margin: 6.6rem 0 10rem;
 
 		@media (max-width: $md3+px) {
-			margin: 10rem 0 10rem;
+			margin: 6rem 0 6rem;
 		}
 
 		@media (max-width: $md4+px) {
@@ -71,21 +71,22 @@
 	}
 
 	&__info-block {
-		margin: 17.2rem 0 4rem;
+		margin: 4rem 0 0rem;
 		background-color: #f9f9f9;
 		background-image: linear-gradient(180deg, #f9f9f9 0%, #ffffff 100%);
-		padding-top: 17.6rem;
+		padding-top: 8.6rem;
 
 		@media (max-width: 1023px) {
-			margin: 14rem 0 8rem;
+			margin: 4rem 0 0rem;
 		}
 
 		@media (max-width: $md3+px) {
-			margin: 12rem 0 8rem;
+			margin: 0rem 0 0rem;
+			padding-top: 6rem;
 		}
 
 		@media (max-width: $md4+px) {
-			margin: 4rem 0 7rem;
+			margin: 0rem 0 0rem;
 			padding-top: 6rem;
 		}
 
@@ -94,22 +95,22 @@
 
 
 	&__awards {
-		margin: 4rem 0 8rem;
+		margin: 0rem 0 0rem;
 		background-color: #f9f9f9;
 		background-image: linear-gradient(180deg, #f9f9f9 0%, #ffffff 100%);
-		padding-top: 17.6rem;
+		padding-top: 8.6rem;
 
 		@media (max-width: 1023px) {
-			margin: 4rem 0 8rem;
+			margin: 4rem 0 0rem;
 		}
 
 		@media (max-width: $md3+px) {
-			margin: 0rem 0 8rem;
+			margin: 0rem 0 0rem;
 			padding-top: 6rem;
 		}
 
 		@media (max-width: $md4+px) {
-			margin: 0rem 0 7rem;
+			margin: 0rem 0 0rem;
 			padding-top: 6rem;
 		}
 
@@ -613,23 +614,23 @@
 		height: 100%;
 		z-index: 1;
 
-		@media (max-width: $md3+px) {
-			background: url(../img/photo/marques-bottom-mobile-bg.png) 0 0 repeat;
+		// @media (max-width: $md3+px) {
+		// 	background: url(../img/photo/marques-bottom-mobile-bg.png) 0 0 repeat;
 
-			&:before {
-				position: absolute;
-				content: '';
-				top: 0;
-				left: 0;
-				width: 100%;
-				height: 100%;
-				background: rgba(#fff, 0.8);
-			}
+		// 	&:before {
+		// 		position: absolute;
+		// 		content: '';
+		// 		top: 0;
+		// 		left: 0;
+		// 		width: 100%;
+		// 		height: 100%;
+		// 		background: rgba(#fff, 0.8);
+		// 	}
 
-			& img {
-				display: none;
-			}
-		}
+		// 	& img {
+		// 		display: none;
+		// 	}
+		// }
 	}
 
 	&__body {
@@ -706,7 +707,7 @@
 .product-block {
 	background-color: #f9f9f9;
 	background-image: linear-gradient(180deg, #f9f9f9 0%, #ffffff 100%);
-	padding-top: 17.6rem;
+	padding-top: 8.6rem;
 
 	@media (max-width: 1023px) {
 		margin: 14rem 0 8rem;
@@ -714,7 +715,6 @@
 
 	@media (max-width: $md3+px) {
 		margin: 12rem 0 8rem;
-		padding-top: 12rem;
 	}
 
 	@media (max-width: $md4+px) {
@@ -775,7 +775,7 @@
 
 //=== services-block ================================================================
 .services-block {
-	margin: 26rem 0;
+	margin: 13rem 0;
 
 	@media (max-width: 1023px) {
 		margin: 12rem 0;
@@ -790,6 +790,7 @@
 		max-width: 138.8rem;
 		margin: 6.4rem auto 0; 
 		display: flex;
+		padding: 0 3rem;
 
 		@media (max-width: 1440px) {
 			max-width: 126.8rem;
@@ -797,6 +798,10 @@
 
 		@media (max-width: 1023px) {
 			display: block;
+		}
+
+		@media (max-width: $md3+px) {
+			padding: 0 1.5rem;
 		}
 	}
 

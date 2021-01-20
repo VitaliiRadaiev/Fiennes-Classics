@@ -83,7 +83,7 @@
 			//loop: true,
 			speed: 600,
 			autoplay: {
-			  delay: document.querySelector('.res-single .res-single__hero.slider') ? 8000 : 4000,
+			  delay: 4000,
 			   disableOnInteraction: false,
 			},
 			spaceBetween: 15,
@@ -123,40 +123,43 @@
 
 // ==  slider-2 ==========================================================================
 {
-	let slider = document.querySelector('.slider-2 .swiper-container');
-	if(slider) {
-		//let childrenLength = slider.querySelector('.swiper-wrapper').children.length;
-	    var mySwiper = new Swiper(slider, {
-		slidesPerView:'auto',
-		speed: 600,
-		spaceBetween: 65,
-		centeredSlides: true,
-		//initialSlide: childrenLength - 1,
-		touchRatio: 1,
-		scrollbar: {
-		  el: slider.querySelector('.swiper-scrollbar'),
-		   draggable: true,
-		},
-		// on: {
-		// 	slideChange: () => {
-		// 		if(mySwiper) {
-		// 			console.dir(mySwiper);
-		// 		}
-		// 	}
-		// }, 
-		 breakpoints: {
-		 	320: {
-		 		spaceBetween: 15
-		 	},
-		   768: {
-		     spaceBetween: 30
-		   },
-		   1024: {
-		   	spaceBetween: 65
-		   },
-		 },  
-		})
+	let slider = document.querySelectorAll('.slider-2 .swiper-container');
 
+	if(slider.length>0) {
+		//let childrenLength = slider.querySelector('.swiper-wrapper').children.length;
+		slider.forEach(item => {
+			let mySwiper;
+			    mySwiper = new Swiper(item, {
+				slidesPerView:'auto',
+				speed: 600,
+				spaceBetween: 65,
+				centeredSlides: true,
+				//initialSlide: childrenLength - 1,
+				touchRatio: 1,
+				scrollbar: {
+				  el: item.querySelector('.swiper-scrollbar'),
+				   draggable: true,
+				},
+				// on: {
+				// 	slideChange: () => {
+				// 		if(mySwiper) {
+				// 			console.dir(mySwiper);
+				// 		}
+				// 	}
+				// }, 
+				 breakpoints: {
+					 320: {
+						 spaceBetween: 15
+					 },
+				   768: {
+					 spaceBetween: 30
+				   },
+				   1024: {
+					   spaceBetween: 65
+				   },
+				 },  
+				})
+		})
 		// mySwiper.on('slideChange', function () {
 		//   console.log('slide changed');
 		// });

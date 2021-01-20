@@ -4,10 +4,10 @@
 	}
 
 	&__text-block {
-		margin: 15.3rem 0 15.3rem;
+		margin: 7.65rem 0 7.65rem;
 
 		@media (max-width: $md3+px) {
-			margin: 10rem 0 10rem;
+			margin: 6rem 0 6rem;
 		}
 
 		@media (max-width: $md4+px) {
@@ -28,10 +28,10 @@
 	}
 
 	&__text-block-2 {
-		margin: 13.3rem 0 20.3rem;
+		margin: 6.6rem 0 10rem;
 
 		@media (max-width: $md3+px) {
-			margin: 12rem 0 12rem;
+			margin: 6rem 0 6rem;
 		}
 
 		@media (max-width: $md4+px) {
@@ -40,10 +40,10 @@
 	}
 
 	&__video {
-		margin: 7rem 0 15.6rem;
+		margin: 7rem 0 6.6rem;
 
 		@media (max-width: $md3+px) {
-			margin: 7rem 0 12rem;
+			margin: 7rem 0 6rem;
 		}
 
 		@media (max-width: $md4+px) {
@@ -52,7 +52,7 @@
 	}
 
 	&__slider-2 {
-		margin: 7rem auto;
+		margin: 6.6rem auto;
 
 		padding: 0 0;
 
@@ -63,14 +63,14 @@
 	}
 
 	&__text-block-3 {
-		margin: 13.3rem 0 20.3rem;
+		margin: 6.6rem 0 10rem;
 
 		@media (max-width: $md3+px) {
-			margin: 12rem 0 12rem;
+			margin: 6rem 0 6rem;
 		}
 
 		@media (max-width: $md4+px) {
-			margin: 7rem 0 7rem;
+			margin: 5rem 0 5rem;
 		}
 	}
 
@@ -79,6 +79,7 @@
 		padding: 14.4rem 1.5rem 15rem;
 		background-color: #f1f0f0;
 		text-align: center;
+		margin-bottom: 6.6rem;
 
 		@media (max-width: $md3+px) {
 			padding: 8rem 1.5rem 8rem;
@@ -125,15 +126,11 @@
 
 
 	&__journal {
-		margin: 15.5rem 0 15.5rem;
+		margin: 6.6rem 0 6.6rem;
 
-		@media (max-width: 1440px) {
-			margin: 12rem 0 12rem;
-		}
 
 		@media (max-width: $md3+px) {
 			padding: 0 1.5rem;
-			margin: 7rem 0 7rem;
 
 			& .container_large {
 				padding: 0;
@@ -399,6 +396,7 @@
 // == slider ======================================================================
 
 .slider {
+	margin-bottom: 6.6rem;
 	&__img {
 		height: 80vh;
 		min-height: 48rem;
@@ -604,6 +602,7 @@
 // == slider-2 ======================================================================
 .slider-2 {
 	//margin-left: 10vw;
+	margin-bottom: 6.6rem;
 
 	@media (max-width: $md3+px) {
 		//margin-left: 5vw;
@@ -619,6 +618,12 @@
 		@media (max-width: 1024px) {
 			width: 85%;
 		}
+
+		&.swiper-slide-active {
+			& .slider-2__text {
+				opacity: 1;
+			}
+		}
 	}
 
 	& .scrollbar-wrap {
@@ -626,7 +631,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: flex-end;
-		height: 9rem;
+		height: 3rem;
 		width: 75%;
 		margin: 0 auto 0.5rem;
 
@@ -676,13 +681,14 @@
 
 	&__text {
 		padding: 2rem 0;
-		max-width: 80rem;
+		max-width: none;
 		font-family: $seconFontFamily;
-
+		opacity: 0;
 		font-size: 1.5rem;
 		line-height: 2.3rem;
 		letter-spacing: 0.3rem;
 		margin: 0 auto;
+		transition: all .3s ease;
 
 		& > h3 {
 			color: #231f20;
@@ -698,3 +704,83 @@
 }
 
 // == and slider-2 ======================================================================
+
+
+.ownership_posts {
+	&.marques__awards {
+
+		@media (max-width: $md3+px) {
+			margin-top: 10rem;
+			padding-top: 8rem;
+		}
+
+		& .awards-block__head {
+			margin-bottom: 8rem;
+			& .text-block__title {
+				max-width: 51rem;
+			}
+		}
+
+		& .block-columns-2 {
+			& .column {
+				width: 25%;
+				padding: 0 1.5rem;
+
+				@media (max-width: $md2+px) {
+					width: 33.333%;
+				}
+
+				@media (max-width: $md3+px) {
+					width: 50%;
+				}
+
+				@media (max-width: 575px) {
+					width: 100%;
+				}
+			}
+		}
+
+		& .card {
+			& .card__img  {
+				margin-bottom: 2rem;
+
+				&:before {
+					position: absolute;
+					content: '';
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					z-index: 2;
+					pointer-events: none;
+					transition: all .2s ease;
+					background: transparent;
+				}
+
+				@media (min-width: 992px) {
+					&:hover {
+						&:before {
+							background: rgba(#000, 0.1);
+						}
+					}
+				}
+			}
+
+			& .card__text-wrap {
+				padding: 2rem 2rem;
+			}
+
+			& .card__title {
+				flex: 0 1 auto;
+				font-size: 2.4rem;
+				line-height: 1.1em;
+				margin-bottom: 3rem;
+			}
+
+			& .card__text {
+				flex: 1 1 auto;
+			}
+		}
+	}
+}
