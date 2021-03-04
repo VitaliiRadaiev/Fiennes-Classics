@@ -16,26 +16,24 @@
 	}
 
 	&__text-block {
-		margin: 7.65rem 0 7.65rem;
+		margin: 7.65rem 0 3.65rem;
 
 		@media (max-width: $md3+px) {
-			margin: 6rem 0 6rem;
+			margin: 6rem 0 3rem;
 		}
 
 		@media (max-width: $md4+px) {
-			margin: 5rem 0 5rem;
+			margin: 5rem 0 2rem;
 		}
 	}
 
 	&__crafts-block {
-		margin: 7.65rem 0 0rem;
 		background-color: #f9f9f9;
 		background-image: linear-gradient(180deg, #f9f9f9 0%, #ffffff 100%);
 		padding-top: 8.6rem;
 
 
 		@media (max-width: $md4+px) {
-			margin: 6rem 0 0rem;
 			padding-top: 6rem;
 		}
 

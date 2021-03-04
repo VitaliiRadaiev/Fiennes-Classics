@@ -120,6 +120,33 @@
 		text-transform: uppercase;
 		margin-bottom: 3.1rem;
 
+		@media (max-width: 575px) {
+			margin-bottom: 0;
+			position: relative;
+			display: inline-block;
+
+			&._active {
+				&:after {
+					transform: scale(1, -1);
+				}
+			}
+
+			&:after {
+				position: absolute;
+				content: '';
+				height: 12px;
+				width: 14px;
+				right: -20px;
+				top: 0;
+				background-image: url(../img/icons/arrow_down.svg);
+				background-repeat: no-repeat;
+				transition: all .2s ease;
+				background-position: center;
+				background-size: contain;
+
+			}
+		}
+
 		& > a {
 			color: #5a91ab;
 			font-size: 1.3rem;
@@ -130,10 +157,17 @@
 	}
 
 	&__nav-list {
-
+		@media (max-width: 575px) {
+			display: none;
+			margin-top: 3.1rem;
+		}
 	}
 	&__nav-list-item {
-		margin-bottom: 1.6rem;
+
+		&:not(:last-child) {
+			margin-bottom: 1.6rem;
+
+		}
 
 		& > a {
 			color: #231f20;

@@ -358,7 +358,7 @@ cardJournalHandler();;
 			speed: 600,
 			spaceBetween: 15,
 			autoplay: {
-			  delay: 8000,
+			  delay: 4000,
 			   disableOnInteraction: false,
 			},
 			// scrollbar: {
@@ -397,11 +397,15 @@ cardJournalHandler();;
 // == and  slider ==========================================================================
 ;
 function cardVideoHandler() {
+	let timerId;
 	function togglePlayPause(video,btn) {
 		if(video.paused) {
 			video.play();
 			btn.firstElementChild.className = 'icon-pause2';
-
+			clearTimeout(timerId);
+			timerId = setTimeout(() => {
+				btn.style.opacity = '0';
+			}, 700);
 		} else {
 			video.pause();
 			btn.firstElementChild.className = 'icon-play3';
@@ -410,7 +414,6 @@ function cardVideoHandler() {
 
 	let videoBlock = document.querySelectorAll('.video-block');
 	if(videoBlock.length) {
-		let timerId;
 		videoBlock.forEach((item) => {
 
 			//let videoWrap = card.querySelector('.card-video__video-wrap');
@@ -435,7 +438,7 @@ function cardVideoHandler() {
 							clearTimeout(timerId);
 							timerId = setTimeout(() => {
 								btn.style.opacity = '0';
-							}, 2000);
+							}, 700);
 
 					} else {
 						btn.style.opacity = '1';
@@ -450,6 +453,30 @@ function cardVideoHandler() {
 }
 
 cardVideoHandler();;
+{
+const cookieEl = document.getElementById('cookieMessage');
+const btnClose = document.getElementById('cookieMessageClose');
+
+btnClose.addEventListener('click', () => {
+    cookieEl.style.display = 'none';
+})
+
+let cookies = () => {
+    if (!Cookies.get('hide-cookie')) {
+        setTimeout(() => {
+            cookieEl.style.display = 'block';
+        }, 1000);
+    }
+
+    Cookies.set('hide-cookie', 'true', {
+        expires: 1
+    });
+}
+
+
+
+cookies();
+};
 // === COMMON ==================================================================
 
 
@@ -698,6 +725,56 @@ cardVideoHandler();;
 // == and  slider-2 ==========================================================================
 ;
 // === // HOME ==================================================================
+
+// === FOOTER ==================================================================
+{
+	let footerMenu = document.querySelectorAll('.footer__nav-title');
+	if(footerMenu.length) {
+
+        footerMenu.forEach(item => {
+            let link = item.querySelector('a');
+
+            link.addEventListener('click', function(e) {
+				if(document.documentElement.clientWidth < 575) {
+                    console.log(this.parentElement.nextElementSibling);
+         
+					if(this.parentElement.nextElementSibling) { 
+                        if(this.getAttribute('href').length < 5) {
+                            e.preventDefault();
+							this.parentElement.classList.toggle('_active');
+							_slideToggle(this.parentElement.nextElementSibling); 
+                        } else {
+                            if(!this.parentElement.classList.contains('_active')) {
+
+                                e.preventDefault();
+                                this.parentElement.classList.toggle('_active');
+                                _slideToggle(this.parentElement.nextElementSibling); 
+                            }
+                        }
+
+						
+					}
+
+                    footerMenu.forEach(i => {
+                         let link = i.querySelector('a');
+                        if( link == this) {
+							return;
+                        }
+                        if(link.parentElement.nextElementSibling) {
+							link.parentElement.classList.remove('_active');
+							_slideUp(link.parentElement.nextElementSibling); 
+						}
+                    })
+
+				}
+			})
+        })
+
+	}
+}
+;
+// === // FOOTER ==================================================================
+
 
 // === MARQUES ==================================================================
 {

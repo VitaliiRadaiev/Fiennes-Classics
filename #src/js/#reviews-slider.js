@@ -11,7 +11,7 @@
 			speed: 600,
 			spaceBetween: 15,
 			autoplay: {
-			  delay: 8000,
+			  delay: 4000,
 			   disableOnInteraction: false,
 			},
 			// scrollbar: {

@@ -1,9 +1,13 @@
 function cardVideoHandler() {
+	let timerId;
 	function togglePlayPause(video,btn) {
 		if(video.paused) {
 			video.play();
 			btn.firstElementChild.className = 'icon-pause2';
-
+			clearTimeout(timerId);
+			timerId = setTimeout(() => {
+				btn.style.opacity = '0';
+			}, 700);
 		} else {
 			video.pause();
 			btn.firstElementChild.className = 'icon-play3';
@@ -12,7 +16,6 @@ function cardVideoHandler() {
 
 	let videoBlock = document.querySelectorAll('.video-block');
 	if(videoBlock.length) {
-		let timerId;
 		videoBlock.forEach((item) => {
 
 			//let videoWrap = card.querySelector('.card-video__video-wrap');
@@ -37,7 +40,7 @@ function cardVideoHandler() {
 							clearTimeout(timerId);
 							timerId = setTimeout(() => {
 								btn.style.opacity = '0';
-							}, 2000);
+							}, 700);
 
 					} else {
 						btn.style.opacity = '1';

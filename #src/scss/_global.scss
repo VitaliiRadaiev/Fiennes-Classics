@@ -591,7 +591,6 @@ a {
 		font-size: 1.7rem;
 		font-weight: 300;
 		line-height: 2.3rem;
-		margin-bottom: 4.6rem;
 
 		& a {
 			text-decoration: underline;
@@ -608,12 +607,15 @@ a {
 			font-size: 1.6rem;
 			font-weight: 300;
 			line-height: 2rem;
-			margin-bottom: 3.8rem;
 		}
 	}
 
 	&__btn-wrap {
+		margin-top: 3rem;
 
+		@media (max-width: $md3+px) {
+			margin-top: 2rem;
+		}
 
 	}
 }
@@ -1057,11 +1059,11 @@ a {
 
 // === one-img-block ========================================================================
 .one-img-block {
-	margin: 6.6rem 0 6.6rem; 
+	margin: 0rem 0 6.6rem; 
 
 
 	@media (max-width: $md4+px) {
-		margin: 5rem 0 5rem;
+		margin: 0rem 0 5rem;
 	}
 	
 	& img {
@@ -1458,7 +1460,7 @@ a {
 
 			&.swiper-pagination-bullet-active {
 				& > .progress {
-					 animation: dash 8.1s linear forwards;
+					 animation: dash 4.1s linear forwards;
 				}
 			}
 		}
@@ -1525,14 +1527,26 @@ a {
 
 .leadership__team.club_logos {
 	margin-bottom: 0;
+	margin-top: 0;
 	& .block-columns-2 {
 		margin: 0 -3rem;
-		width: 100%;
+		width: auto;
+
+		@media (max-width: 574px) {
+			text-align: center;
+			margin: 0;
+		}
+
 	}
 
 	& .column {
 		padding: 0 6rem;
-		margin-bottom: 15rem;
+		margin-bottom: 5rem;
+
+		@media (max-width: 574px) {
+			text-align: center;
+			margin-bottom: 2rem;
+		}
 	}
 
 	& .card {
@@ -1545,6 +1559,7 @@ a {
 				max-height: 100%;
 				height: auto;
 				width: auto;
+				position: static;
 			}
 		}
 

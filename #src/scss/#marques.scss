@@ -98,7 +98,7 @@
 		margin: 0rem 0 0rem;
 		background-color: #f9f9f9;
 		background-image: linear-gradient(180deg, #f9f9f9 0%, #ffffff 100%);
-		padding-top: 8.6rem;
+		padding-top: 2.6rem;
 
 		@media (max-width: 1023px) {
 			margin: 4rem 0 0rem;
@@ -106,12 +106,10 @@
 
 		@media (max-width: $md3+px) {
 			margin: 0rem 0 0rem;
-			padding-top: 6rem;
 		}
 
 		@media (max-width: $md4+px) {
 			margin: 0rem 0 0rem;
-			padding-top: 6rem;
 		}
 
 
@@ -597,13 +595,13 @@
 
 .bottom-marques {
 	position: relative;
-	height: 0;
-	padding-bottom: 31%;
 	background-color: #d8d7d7;
+	margin-bottom: 85px;
 
 	@media (max-width: $md3+px) {
 		height: auto;
 		padding-bottom: 0;
+		margin-bottom: 60px;
 	}
 
 	&__img {
@@ -634,19 +632,16 @@
 	}
 
 	&__body {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
+		position: relative;
 		height: 100%;
 		display: flex;
 		align-items: center;
 		z-index: 2;
+		min-height: 355px;
 
 		@media (max-width: $md3+px) {
 			min-height: 40rem;
 			padding: 2rem 1.5rem;
-			position: static;
 			flex-direction: column;
 			justify-content: center;
 		}
@@ -671,7 +666,7 @@
 		}
 
 		& > a {
-			color: #000000;
+			color: #fff;
 			font-weight: 700;
 			letter-spacing: 0.2em;
 			text-transform: uppercase;

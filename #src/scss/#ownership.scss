@@ -10,14 +10,12 @@
 	}
 
 	&__advantages {
-		margin: 4rem 0 0rem;
+		margin: 1rem 0 0rem;
 		background-color: #f9f9f9;
 		background-image: linear-gradient(180deg, #f9f9f9 0%, #ffffff 100%);
 		padding-top: 8.6rem;
 
-		@media (max-width: 1023px) {
-			margin: 4rem 0 0rem;
-		}
+
 
 		@media (max-width: $md3+px) {
 			margin: 0rem 0 0rem;
@@ -32,14 +30,12 @@
 	}
 
 	&__servicing {
-		margin: 4rem 0 0rem;
+		margin: 1rem 0 0rem;
 		background-color: #f9f9f9;
 		background-image: linear-gradient(180deg, #f9f9f9 0%, #ffffff 100%);
 		padding-top: 8.6rem;
 
-		@media (max-width: 1023px) {
-			margin: 4rem 0 0rem;
-		}
+
 
 		@media (max-width: $md3+px) {
 			margin: 0rem 0 0rem;
@@ -65,9 +61,9 @@
 	}
 
 	&__list {
-		margin: 6.6rem 0 0rem;
+		margin: 3.6rem 0 0rem;
 		@media (max-width: $md3+px) {
-			margin: 6rem 0 0rem;
+			margin: 3rem 0 0rem;
 			& .container_large-1400 {
 				padding: 0;
 			}
@@ -78,13 +74,16 @@
 		}
 
 		& .block-columns-2 .column {
-		    margin-bottom: 14.5rem;
+		    margin-bottom: 7.5rem;
 
 		    @media (max-width: $md3+px) {
-		    	 margin-bottom: 7rem;
+		    	 margin-bottom: 5rem;
 		    }
 		}
 	}
+
+
+
 }
 
 
@@ -292,5 +291,4 @@
 		}
 	}
 }
-
 
