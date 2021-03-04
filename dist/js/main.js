@@ -455,7 +455,8 @@ function cardVideoHandler() {
 cardVideoHandler();;
 {
 const cookieEl = document.getElementById('cookieMessage');
-const btnClose = document.getElementById('cookieMessageClose');
+    if(cookieEl) {
+        const btnClose = document.getElementById('cookieMessageClose');
 
 btnClose.addEventListener('click', () => {
     cookieEl.style.display = 'none';
@@ -476,6 +477,8 @@ let cookies = () => {
 
 
 cookies();
+    }
+
 };
 // === COMMON ==================================================================
 
